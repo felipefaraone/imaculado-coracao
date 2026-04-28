@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap');
+
+/* ================================================================
+   VARIÁVEIS — Paleta, tipografia e espaçamento
+   ================================================================ */
+:root {
+  /* Paleta */
+  --ink-cream:     #F5EFE6;
+  --ink-parchment: #EBE1D0;
+  --ink-deep:      #2B1810;
+  --ink-carmine:   #8B2E1F;
+  --ink-gold:      #B8863E;
+  --ink-rule:      #D4C4A8;
+  --ink-rule-soft: rgba(212, 196, 168, 0.45);
+  --ink-mute:      #7A6658;
+
+  /* Tipografia */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-ui:      'Inter', system-ui, sans-serif;
+
+  /* Escala tipográfica */
+  --fs-h1:      56px;
+  --fs-h2:      36px;
+  --fs-h3:      24px;
+  --fs-eyebrow: 11px;
+  --fs-lead:    18px;
+  --fs-body:    15px;
+  --fs-small:   13px;
+  --fs-mini:    11px;
+
+  /* Espaçamento */
+  --space-section:  96px;
+  --space-block:    48px;
+  --space-element:  24px;
+  --space-tight:    12px;
+}
+
+/* ================================================================
+   BASE
+   ================================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--ink-cream); font-family: var(--font-body); font-weight: 400; color: var(--ink-deep); -webkit-font-smoothing: antialiased; }
+
+.page { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* ================================================================
+   TIPOGRAFIA UTILITÁRIA
+   ================================================================ */
+.page-title {
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: var(--fs-h1); line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--ink-deep); margin: 0 0 28px; text-wrap: balance;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.page-lead {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: var(--fs-lead); line-height: 1.55; color: var(--ink-deep);
+  max-width: 56ch; margin: 0 0 36px;
+}
+.eyebrow {
+  font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink-carmine); margin-bottom: 12px; display: block;
+}
+.eyebrow-gold  { color: var(--ink-gold); }
+.eyebrow-mute  { color: var(--ink-mute); }
+
+h2 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: var(--fs-h2); line-height: 1.15; letter-spacing: -0.018em;
+  color: var(--ink-deep); margin: 0 0 16px; text-wrap: balance;
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
+
+h3 {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: var(--fs-h3); line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--ink-deep); margin: 0 0 12px;
+}
+
+.dropcap::first-letter {
+  font-family: var(--font-display); font-style: normal; font-weight: 500;
+  float: left; font-size: 4.2em; line-height: 0.84;
+  padding: 0.06em 0.14em 0 0; color: var(--ink-carmine);
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+address { font-style: normal; }
+.nowrap { white-space: nowrap; }
+
+/* ================================================================
+   BOTÕES
+   ================================================================ */
+.btn-primary, .btn-secondary, .btn-outline-gold, .btn-ghost {
+  font-family: var(--font-ui); font-size: 14px; font-weight: 500;
+  padding: 14px 28px; border-radius: 0; border: 1px solid transparent;
+  cursor: pointer; letter-spacing: 0.04em; text-decoration: none;
+  transition: all 250ms ease-out;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+
+/* BTN-PRIMARY — ação principal */
+.btn-primary {
+  background: var(--ink-carmine);
+  color: var(--ink-cream);
+  border-color: var(--ink-carmine);
+}
+.btn-primary:hover {
+  background: var(--ink-deep);
+  border-color: var(--ink-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 46, 31, 0.25);
+}
+
+/* BTN-SECONDARY — ação secundária (outline carmim) */
+.btn-secondary {
+  background: transparent;
+  color: var(--ink-carmine);
+  border-color: var(--ink-carmine);
+}
+.btn-secondary:hover {
+  background: var(--ink-carmine);
+  color: var(--ink-cream);
+  transform: translateY(-2px);
+}
+
+/* BTN-OUTLINE-GOLD — ação terciária */
+.btn-outline-gold {
+  background: transparent;
+  color: var(--ink-deep);
+  border-color: var(--ink-gold);
+}
+.btn-outline-gold:hover {
+  background: var(--ink-parchment);
+  border-color: var(--ink-deep);
+}
+
+/* BTN-GHOST — link navegação sutil */
+.btn-ghost {
+  background: transparent; color: var(--ink-carmine);
+  border-color: transparent; padding-left: 0; padding-right: 0;
+}
+.btn-ghost:hover { color: #5c1f13; }
+
+/* BTN-SECONDARY sobre fundo escuro (hero) */
+.hero-fullbleed .btn-secondary {
+  color: var(--ink-cream);
+  border-color: var(--ink-cream);
+}
+.hero-fullbleed .btn-secondary:hover {
+  background: var(--ink-cream);
+  color: var(--ink-deep);
+}
+
+/* WaBtn */
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-ui); font-size: var(--fs-small); font-weight: 500;
+  color: var(--ink-carmine); background: transparent;
+  border: 1px solid var(--ink-carmine); padding: 10px 18px;
+  text-decoration: none; cursor: pointer; border-radius: 0;
+  transition: all 140ms;
+}
+.wa-btn:hover { background: var(--ink-carmine); color: var(--ink-cream); }
+.wa-circle {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: #25D366; border-radius: 50%; flex-shrink: 0;
+}
+
+/* ================================================================
+   DIVISORES — apenas dois tipos
+   ================================================================ */
+/* Linha hairline */
+.div-rule, .div-plain { border: 0; border-top: 1px solid var(--ink-rule); margin: var(--space-block) 0; }
+/* Fleuron centralizado */
+.div-fleuron { text-align: center; color: var(--ink-gold); font-family: serif; font-size: 20px; margin: var(--space-block) 0; }
+.div-fleuron::before { content: "❦"; }
+
+/* ================================================================
+   IMAGENS — moldura editorial "passe-partout duplo"
+   ================================================================ */
+.ed-fig { margin: 0; padding: 0; }
+.ed-fig-frame {
+  position: relative;
+  display: block;
+  background: var(--ink-cream);
+  padding: 12px;
+  border: 1px solid var(--ink-rule);
+  box-shadow:
+    inset 0 0 0 1px var(--ink-cream),
+    inset 0 0 0 2px var(--ink-rule);
+  filter: drop-shadow(0 2px 8px rgba(43, 24, 16, 0.12));
+  overflow: hidden;
+}
+.ed-fig-frame img {
+  display: block; width: 100%; height: auto;
+  object-fit: cover;
+}
+.ed-fig figcaption, .ed-fig-cap {
+  font-family: var(--font-ui); font-size: var(--fs-small); font-weight: 400;
+  letter-spacing: 0.04em; color: var(--ink-mute);
+  margin-top: 10px; font-style: italic;
+  display: block;
+}
+/* Categoria A — hero de seção */
+.ed-fig--hero-page .ed-fig-frame { max-width: 100%; }
+.ed-fig--hero-page .ed-fig-frame img { max-height: 70vh; width: 100%; aspect-ratio: 16/10; }
+/* Categoria B — editorial dentro de seção */
+.ed-fig--landscape .ed-fig-frame img { max-height: 320px; aspect-ratio: 3/2; }
+.ed-fig--landscape-full .ed-fig-frame img { max-height: min(70vh,520px); width: 100%; aspect-ratio: 3/2; }
+/* Categoria C — portrait */
+.ed-fig--portrait .ed-fig-frame img { max-height: 380px; aspect-ratio: 3/4; }
+.ed-fig--portrait-float { float: right; width: 280px; margin: 4px 0 24px 32px; }
+.ed-fig--portrait-inline { float: right; width: 220px; margin: 4px 0 20px 28px; }
+@media (max-width: 768px) {
+  .ed-fig--portrait-float, .ed-fig--portrait-inline { float: none; width: 100%; margin: 0 0 24px; }
+}
+
+/* ================================================================
+   DOCTRINE QUOTE
+   ================================================================ */
+.doctrine { margin: 48px 0; max-width: 64ch; }
+.doctrine-text {
+  padding-left: 22px;
+  border-left: 2px solid var(--ink-carmine);
+  margin-bottom: 14px;
+}
+.doctrine blockquote {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 22px; line-height: 1.5; color: var(--ink-deep);
+  margin: 0; letter-spacing: -0.008em;
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
+.doctrine figcaption {
+  font-family: var(--font-ui); font-weight: 500; font-size: var(--fs-eyebrow);
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-gold);
+  padding-left: 0; margin-top: 16px;
+}
+
+/* ================================================================
+   SITE HEADER
+   ================================================================ */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 48px;
+  background: color-mix(in oklch, #F5EFE6 94%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--ink-rule);
+}
+.brand-logo {
+  display: flex; align-items: center; gap: 14px;
+  text-decoration: none;
+}
+.brand-logo img { height: 44px; width: auto; flex-shrink: 0; }
+.brand-wordmark { display: flex; flex-direction: column; gap: 3px; line-height: 1; }
+.brand-wordmark-sup  { font-family: var(--font-display); font-size: 10px; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink-mute); }
+.brand-wordmark-main { font-family: var(--font-display); font-size: 14px; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-deep); white-space: nowrap; }
+.site-header nav ul { display: flex; gap: 28px; list-style: none; padding: 0; margin: 0; align-items: center; }
+.site-header nav a {
+  font-family: var(--font-ui); font-size: var(--fs-small); font-weight: 500;
+  color: var(--ink-deep); letter-spacing: 0.02em;
+  text-decoration: none; position: relative; padding-bottom: 4px;
+  transition: color 140ms;
+}
+.site-header nav a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 1px; background: var(--ink-carmine);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 300ms ease;
+}
+.site-header nav a:hover { color: var(--ink-carmine); }
+.site-header nav a:hover::after,
+.site-header nav a.active::after { transform: scaleX(1); }
+.site-header nav a.active { color: var(--ink-carmine); }
+
+/* Botão Contribua — outline, sem pulsação */
+.nav-contribua {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: transparent; color: var(--ink-carmine);
+  border: 1px solid var(--ink-carmine); border-radius: 2px;
+  padding: 10px 20px; cursor: pointer;
+  text-decoration: none; display: inline-block;
+  transition: all 200ms;
+}
+.nav-contribua:hover { background: var(--ink-carmine); color: var(--ink-cream); }
+
+/* ================================================================
+   MAIN LAYOUT
+   ================================================================ */
+.main { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 64px 48px 96px; }
+.main-home { max-width: none; padding: 0 0 96px; }
+.home-inner { max-width: 1080px; margin: 0 auto; padding: 48px 48px 0; }
+
+/* ================================================================
+   HERO FULLBLEED
+   ================================================================ */
+.hero-fullbleed {
+  position: relative; min-height: 880px;
+  display: flex; flex-direction: column;
+  background-image: url('assets/fachada-externa.jpg');
+  background-size: cover; background-position: center 35%;
+  overflow: hidden;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(43,24,16,0.55) 0%,
+    rgba(43,24,16,0.35) 40%,
+    rgba(43,24,16,0.50) 100%);
+  pointer-events: none; z-index: 1;
+}
+.hero-stack {
+  position: relative; z-index: 2;
+  flex: 1; max-width: 1080px; width: 100%; margin: 0 auto;
+  padding: 100px 48px 72px;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.hero-eyebrow {
+  font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: #A07828; margin-bottom: 24px;
+}
+.hero-eyebrow--ornamented {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+}
+.eyebrow-rule {
+  display: inline-block; width: 40px; height: 1px;
+  background: #A07828; opacity: 0.7;
+}
+.hero-title-light {
+  font-family: var(--font-display); font-weight: 400; font-style: italic;
+  font-size: 60px; line-height: 1.05; letter-spacing: -0.015em;
+  color: #F5EFE6; margin: 0 0 22px; text-wrap: balance;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+}
+.hero-rule-light { color: var(--ink-gold); font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.8em; margin: 8px 0 28px; }
+.hero-rule-light::before { content: "\2022 \00A0 \2022 \00A0 \2022"; }
+.hero-lead {
+  font-family: var(--font-body); font-weight: 400;
+  font-size: var(--fs-lead); line-height: 1.55;
+  color: #F5EFE6; max-width: 640px; margin: 0 auto 36px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+/* Drop cap do hero — branco sólido para contraste sobre a foto */
+.drop-cap {
+  float: left;
+  font-family: var(--font-display); font-weight: 700; font-style: normal;
+  font-size: 4em; line-height: 0.85;
+  margin: 0.04em 0.08em 0 0;
+  color: #F5EFE6;
+  font-variation-settings: "opsz" 144, "SOFT" 50;
+}
+.hero-ctas-light { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; justify-content: center; }
+
+/* ================================================================
+   HOME — SCHEDULE STRIP
+   ================================================================ */
+.sch-strip {
+  background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
+  padding: 56px 48px;
+  text-align: center;
+}
+.sch-strip-orn { color: var(--ink-gold); font-family: serif; font-size: 18px; margin-bottom: 16px; }
+.sch-strip-eyebrow { justify-content: center; display: block; }
+.sch-strip-cols {
+  display: flex; align-items: flex-start; justify-content: center;
+  gap: 0; margin: 32px auto; max-width: 760px;
+}
+.sch-strip-col { flex: 1; padding: 0 40px; }
+.sch-strip-sep { width: 1px; background: var(--ink-rule); align-self: stretch; margin: 8px 0; flex-shrink: 0; }
+.sch-day {
+  font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-carmine);
+  margin-bottom: 16px;
+}
+.sch-times {
+  font-family: var(--font-display); font-weight: 400; font-size: 32px;
+  line-height: 1.3; color: var(--ink-deep);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
+.sch-strip-link { margin-top: 40px; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; display: block; text-align: center; }
+
+/* ================================================================
+   HOME — INTENTIONS
+   ================================================================ */
+.intentions { padding: 56px 0 40px; max-width: 780px; }
+.intentions > h2 { font-size: var(--fs-h2); margin: 0 0 12px; }
+.intentions-lead {
+  font-family: var(--font-body); font-weight: 500; font-size: var(--fs-body);
+  line-height: 1.6; color: var(--ink-mute); max-width: 56ch;
+  margin: 0 0 32px; letter-spacing: -0.003em;
+}
+.int-list { list-style: none; padding: 0; margin: 0; }
+.int-list li { border-top: 1px solid var(--ink-rule); }
+.int-list li:last-child { border-bottom: 1px solid var(--ink-rule); }
+.int-item-link {
+  display: grid; grid-template-columns: 56px 1fr auto 24px;
+  gap: 16px; align-items: baseline;
+  padding: 20px 0; text-decoration: none; color: inherit;
+  transition: background 140ms, padding 140ms;
+}
+.int-item-link:hover { background: var(--ink-parchment); padding-left: 8px; padding-right: 8px; }
+.int-num { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--ink-gold); }
+.int-label { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--ink-deep); letter-spacing: -0.01em; font-variation-settings: "opsz" 72, "SOFT" 50; }
+.int-sub { font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-mute); text-align: right; }
+.int-arrow { color: var(--ink-carmine); font-family: serif; font-size: 18px; }
+
+/* ================================================================
+   HOME — 3 SACRAMENTOS
+   ================================================================ */
+.home-sac3 { padding: 8px 0 48px; }
+.home-sac3-hdr { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; gap: 24px; }
+.home-sac3-hdr h2 { margin: 6px 0 0; }
+.home-sac3-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
+.home-sac3-card { background: var(--ink-cream); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms, transform 250ms, box-shadow 250ms; }
+.home-sac3-card:hover { background: var(--ink-parchment); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(43,24,16,0.10); }
+.home-sac3-card h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-h3); color: var(--ink-deep); margin: 0; letter-spacing: -0.01em; }
+.home-sac3-card p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.6; color: var(--ink-mute); margin: 0; flex: 1; }
+
+/* ================================================================
+   HOME — CLARETIANOS RESUMO
+   ================================================================ */
+.home-claret { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: flex-start; padding: 8px 0 48px; }
+.home-claret-text h2 { margin: 8px 0 16px; }
+.home-claret-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 14px; max-width: 52ch; }
+
+/* ================================================================
+   HOME — REDES SOCIAIS
+   ================================================================ */
+.redes { padding: 8px 0 48px; }
+.redes-card-wrap { background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); padding: 40px 48px; max-width: 720px; }
+.redes-card-wrap h2 { margin: 8px 0 14px; }
+.redes-card-wrap p { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink-deep); margin: 0 0 24px; }
+.redes-links { display: flex; flex-direction: column; gap: 12px; }
+.redes-link { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 16px; color: var(--ink-deep); text-decoration: none; transition: color 140ms; padding-bottom: 4px; border-bottom: 1px solid var(--ink-rule); width: fit-content; }
+.redes-link:hover { color: var(--ink-carmine); }
+.redes-link--wa { color: var(--ink-deep); }
+
+/* ================================================================
+   HOME — DÍZIMO CTA
+   ================================================================ */
+.dizimo-home { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; padding: 8px 0 48px; border-top: 1px solid var(--ink-rule); flex-wrap: wrap; }
+.dizimo-home h2 { margin: 8px 0 14px; }
+.dizimo-home p { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink-deep); max-width: 52ch; margin: 0; }
+
+/* ================================================================
+   RUBRIC (schedule dentro de página)
+   ================================================================ */
+.rubric { background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); padding: 40px 48px; max-width: 600px; }
+.rubric h2 { font-size: 28px; }
+.schedule { margin: 0; padding: 0; }
+.sch-row { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px dotted var(--ink-rule); font-family: var(--font-body); font-size: 16px; }
+.sch-row:last-of-type { border-bottom: 0; }
+.sch-row dt { color: var(--ink-deep); font-weight: 400; }
+.sch-row dd { margin: 0; color: var(--ink-carmine); font-family: var(--font-display); font-style: italic; font-size: 18px; }
+.rubric-foot { margin-top: 20px; font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-mute); line-height: 1.6; }
+
+/* ================================================================
+   HISTORY — LAYOUT (A Paróquia)
+   ================================================================ */
+.chapter-head { margin-bottom: 40px; }
+.chapter-body { display: grid; grid-template-columns: 1fr 260px; gap: 56px; margin-bottom: 48px; }
+.chapter-main p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.75; color: var(--ink-deep); margin: 0 0 22px; max-width: 62ch; }
+.chapter-margin { font-family: var(--font-body); font-size: var(--fs-small); line-height: 1.6; color: var(--ink-mute); padding-top: 12px; border-top: 1px solid var(--ink-rule); }
+.chapter-margin p { margin: 10px 0; }
+.chapter-margin strong { color: var(--ink-deep); font-family: var(--font-display); font-style: italic; }
+.margin-hr { border: 0; border-top: 1px solid var(--ink-rule-soft); margin: 14px 0; }
+.history-break { margin: 48px -48px; }
+
+/* Arquitetura e arte — masonry grid */
+.chapter-arq { padding: 8px 0; }
+.arq-intro { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.75; color: var(--ink-deep); max-width: 72ch; margin: 0 0 32px; }
+.arq-masonry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+.arq-photo { margin: 0; }
+.arq-photo--wide { grid-column: span 2; }
+.arq-photo--wide .ed-fig-frame img { aspect-ratio: 16/9; max-height: 480px; }
+.arq-photo .ed-fig-frame img { aspect-ratio: 3/4; max-height: 360px; }
+.arq-photo .ed-fig-cap,
+.arq-photo--wide .ed-fig-cap {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-gold);
+  margin-top: 8px; font-style: normal;
+}
+
+/* Timeline */
+.tl-section { padding: 8px 0; }
+.tl-list { list-style: none; padding: 0; margin: 24px 0 0; max-width: 680px; position: relative; }
+.tl-list::before {
+  content: ''; position: absolute;
+  left: 100px; top: 10px; bottom: 10px;
+  width: 1px; background: var(--ink-rule);
+}
+.tl-item { display: grid; grid-template-columns: 92px 20px 1fr; gap: 16px; align-items: flex-start; padding-bottom: 64px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-year { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--ink-gold); text-align: right; padding-top: 1px; }
+.tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-carmine); margin-top: 6px; position: relative; z-index: 1; flex-shrink: 0; }
+.tl-event { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.5; color: var(--ink-deep); padding-top: 1px; }
+
+/* Tombamento */
+.tombamento { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: flex-start; padding: 8px 0; }
+.tombamento-col p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); max-width: 54ch; margin: 0 0 16px; }
+
+/* Visita */
+.visita-block { padding: 8px 0; max-width: 720px; margin-left: auto; margin-right: auto; }
+.visita-lead { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--ink-deep); margin: 0 0 14px; }
+.visita-block p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); max-width: 58ch; margin: 0 0 16px; }
+.visita-horarios { background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); padding: 20px 24px; margin: 16px 0 20px; }
+.visita-horarios ul { list-style: none; padding: 0; margin: 0; }
+.visita-horarios li { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); padding: 4px 0; border-bottom: 1px dotted var(--ink-rule-soft); }
+.visita-horarios li:last-child { border-bottom: 0; }
+
+/* ================================================================
+   CLARETIANOS
+   ================================================================ */
+.claret-section { padding: 8px 0; }
+.claret-section > p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.75; max-width: 64ch; margin: 0 0 16px; }
+
+/* Grid congregação: 2fr texto, 1fr marginália */
+.claret-section .chapter-body { grid-template-columns: 2fr 1fr; gap: 64px; }
+
+/* Marginália estilo caderno */
+.claret-marginalia {
+  border-left: 1px solid var(--ink-gold);
+  padding-left: 24px;
+  padding-top: 8px;
+}
+.claret-marginalia dl { margin: 0; }
+.claret-marginalia dt {
+  font-family: var(--font-display); font-style: italic; font-size: var(--fs-body);
+  color: var(--ink-deep); margin-top: 16px; margin-bottom: 4px;
+}
+.claret-marginalia dt:first-child { margin-top: 0; }
+.claret-marginalia dd {
+  font-family: var(--font-body); font-size: var(--fs-small);
+  color: var(--ink-mute); margin: 0 0 0 0; line-height: 1.5;
+}
+.claret-marginalia .margin-hr { border: 0; border-top: 1px solid var(--ink-rule-soft); margin: 14px 0; }
+
+/* Fundador */
+.claret-founder-grid { display: grid; grid-template-columns: 1fr 380px; gap: 48px; align-items: flex-start; }
+.claret-founder-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.75; max-width: 58ch; margin: 0 0 16px; }
+.claret-founder-photo { margin: 0; }
+
+/* Pároco */
+.paroco { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: flex-start; }
+.paroco-text h2 { margin-bottom: 16px; }
+.paroco-text h2 em { font-style: italic; font-size: var(--fs-h3); color: var(--ink-gold); }
+.paroco-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 16px; }
+.paroco-text .paroco-note { font-family: var(--font-display); font-style: italic; font-size: var(--fs-small); color: var(--ink-mute); }
+.paroco-photo { margin: 0; }
+.claret-links p { margin: 0 0 10px; }
+.claret-extlink { font-family: var(--font-ui); font-size: var(--fs-body); font-weight: 500; color: var(--ink-carmine); text-decoration: none; border-bottom: 1px solid var(--ink-rule); transition: border-color 140ms; }
+.claret-extlink:hover { border-bottom-color: var(--ink-carmine); }
+
+/* ================================================================
+   MISSAS PAGE
+   ================================================================ */
+/* Horários — layout editorial vertical */
+.missa-horario-block {
+  background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
+  padding: 56px 48px; margin: 32px 0; max-width: 680px;
+}
+.missa-horario-orn { color: var(--ink-gold); font-family: serif; font-size: 18px; margin-bottom: 24px; text-align: center; }
+.missa-group { text-align: center; padding: 32px 0; border-top: 1px solid var(--ink-rule); }
+.missa-group:first-of-type { border-top: 0; padding-top: 0; }
+.missa-group-label {
+  font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-carmine);
+  margin-bottom: 16px; display: block;
+}
+.missa-times-row {
+  display: flex; justify-content: center; align-items: center;
+  gap: 16px; flex-wrap: wrap;
+}
+.missa-time {
+  font-family: var(--font-display); font-weight: 400; font-size: 28px;
+  line-height: 1; color: var(--ink-deep);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
+.missa-orn { color: var(--ink-gold); font-family: serif; font-size: 12px; opacity: 0.7; }
+.missa-horario-note { font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-mute); margin: 24px 0 0; text-align: center; }
+
+/* Adoração Eucarística — grid 50/50 */
+.adoracao-block { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; padding: 8px 0 40px; }
+.adoracao-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 14px; }
+.adoracao-info {
+  background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
+  padding: 20px 24px; margin-top: 16px;
+}
+.adoracao-info p { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink-deep); margin: 0; }
+
+/* Ano litúrgico */
+.lit-section { padding: 8px 0; }
+.lit-title { margin-bottom: 20px; }
+.lit-intro { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.75; max-width: 68ch; margin: 0 0 20px; color: var(--ink-deep); }
+.lit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); margin: 32px 0 24px; }
+.lit-card { background: var(--ink-cream); display: flex; min-height: 120px; }
+.lit-card-bar { width: 8px; flex-shrink: 0; }
+.lit-card-body { padding: 20px 22px; flex: 1; }
+.lit-card-tempo { font-family: var(--font-display); font-weight: 400; font-size: 22px; color: var(--ink-deep); letter-spacing: -0.01em; margin-bottom: 4px; }
+.lit-card-desc { font-family: var(--font-body); font-size: var(--fs-small); line-height: 1.6; color: var(--ink-mute); margin: 0; }
+/* Card de fechamento do ano litúrgico */
+.lit-card--closing {
+  background: linear-gradient(135deg, var(--ink-cream), var(--ink-parchment));
+  align-items: center; justify-content: center;
+}
+.lit-card--closing .lit-card-body { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.lit-closing-symbol { font-size: 28px; color: var(--ink-gold); margin-bottom: 12px; line-height: 1; }
+.lit-closing-text { font-family: var(--font-display); font-style: italic; font-size: 14px; color: var(--ink-mute); max-width: 20ch; margin: 0; line-height: 1.5; }
+.lit-note { font-family: var(--font-display); font-style: italic; font-size: var(--fs-body); color: var(--ink-mute); max-width: 64ch; margin: 8px 0 16px; }
+
+/* ================================================================
+   SACRAMENTOS ACCORDION
+   ================================================================ */
+.sac-accord-wrap { margin-top: 32px; }
+.sac-accord-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
+.sac-accord-card { background: var(--ink-cream); }
+.sac-accord-card.open { background: var(--ink-parchment); }
+.sac-accord-header {
+  display: flex; align-items: center; gap: 14px;
+  padding: 20px 24px; width: 100%; min-height: 64px;
+  background: transparent; border: 0; cursor: pointer; text-align: left;
+  transition: background 140ms;
+}
+.sac-accord-header:hover { background: rgba(184,134,62,0.06); }
+.sac-accord-num { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--ink-gold); flex-shrink: 0; }
+.sac-accord-title { font-family: var(--font-display); font-weight: 400; font-size: 22px; color: var(--ink-deep); letter-spacing: -0.015em; flex: 1; font-variation-settings: "opsz" 72, "SOFT" 50; }
+.sac-accord-chevron { color: var(--ink-mute); margin-left: auto; flex-shrink: 0; }
+/* Accordion animation via grid-template-rows */
+.sac-accord-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 400ms ease-out; }
+.sac-accord-card.open .sac-accord-body { grid-template-rows: 1fr; }
+/* Layout do conteúdo aberto: block para floats funcionarem */
+.sac-accord-inner {
+  overflow: hidden; min-height: 0;
+  padding: 0 24px 28px;
+}
+.sac-accord-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 12px; }
+.sac-accord-text p:last-child { margin: 0; }
+.sac-accord-wa { display: inline-flex; margin-top: 8px; }
+/* Slot decorativo */
+.sac-accord-deco { background: var(--ink-cream); padding: 28px; display: flex; align-items: center; justify-content: center; }
+.sac-accord-deco--wide { grid-column: span 2; }
+.sac-accord-deco--wide .ed-fig-frame img { aspect-ratio: 16/9; max-height: 300px; }
+
+/* Matrimônio — bloco em destaque fora do accordion */
+.matrimonio-featured {
+  background: var(--ink-parchment);
+  border-top: 1px solid var(--ink-gold);
+  padding: 56px 48px;
+  margin: 0;
+}
+.matrimonio-inner {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 56px;
+  align-items: flex-start;
+  max-width: 960px;
+}
+.matrimonio-text h2 { margin: 8px 0 16px; }
+.matrimonio-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 16px; color: var(--ink-deep); }
+.matrimonio-text .matrimonio-requisitos {
+  background: var(--ink-cream); border: 1px solid var(--ink-rule);
+  padding: 16px 20px; margin: 16px 0 20px;
+  font-size: var(--fs-small); color: var(--ink-mute); line-height: 1.65;
+}
+.matrimonio-photo { margin: 0; }
+
+/* RICA block */
+.sac-rica { margin: 48px auto 0; padding: 40px 48px; background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); max-width: 720px; }
+.sac-rica h3 { font-family: var(--font-display); font-weight: 400; font-style: italic; font-size: var(--fs-h2); letter-spacing: -0.015em; margin: 8px 0 16px; color: var(--ink-deep); font-variation-settings: "opsz" 96, "SOFT" 50; }
+.sac-rica p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.65; max-width: 58ch; margin: 0 0 14px; }
+
+/* ================================================================
+   CONTRIBUA PAGE
+   ================================================================ */
+.pix-block { padding: 8px 0 40px; max-width: 680px; }
+.pix-selector-label { font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 14px; display: block; }
+.pix-val-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+.pix-val-btn {
+  font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--ink-deep);
+  min-width: 120px; height: 60px; padding: 0 16px;
+  background: transparent; border: 1px solid var(--ink-gold); cursor: pointer;
+  border-radius: 2px; transition: all 200ms ease-out;
+  font-variation-settings: "opsz" 72, "SOFT" 50;
+}
+.pix-val-btn:last-child { min-width: 160px; }
+.pix-val-btn:hover { background: var(--ink-parchment); border-color: var(--ink-carmine); }
+.pix-val-btn.active { background: var(--ink-carmine); color: var(--ink-cream); border-color: var(--ink-carmine); }
+.pix-area { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 0; }
+.pix-area .eyebrow { text-align: center; }
+.pix-qr { border: 1px solid var(--ink-rule); padding: 8px; background: var(--ink-cream); }
+.pix-copy-row { display: flex; align-items: center; gap: 10px; width: 100%; max-width: 480px; background: var(--ink-parchment); border: 1px solid var(--ink-rule); padding: 10px 14px; }
+.pix-copy-code { font-family: var(--font-ui); font-size: var(--fs-mini); color: var(--ink-mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; }
+.pix-copy-btn { background: none; border: 0; cursor: pointer; color: var(--ink-deep); padding: 2px 6px; transition: color 140ms; flex-shrink: 0; }
+.pix-copy-btn:hover { color: var(--ink-carmine); }
+.pix-back { margin-top: 8px; font-size: var(--fs-small); }
+.contribua-outras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
+.contribua-card { background: var(--ink-cream); padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; }
+.contribua-card h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-h3); color: var(--ink-deep); margin: 0; letter-spacing: -0.01em; }
+.contribua-card p { font-family: var(--font-body); font-size: var(--fs-small); line-height: 1.65; margin: 0; }
+.contribua-sch { display: flex; flex-direction: column; gap: 6px; }
+.contribua-sch > div { display: flex; justify-content: space-between; gap: 16px; font-family: var(--font-body); font-size: var(--fs-small); padding-bottom: 5px; border-bottom: 1px dotted var(--ink-rule); }
+.contribua-sch > div span:first-child { color: var(--ink-mute); }
+.contribua-fala { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; padding: 16px 0; border-top: 1px solid var(--ink-rule); }
+.contribua-fala p { font-family: var(--font-body); font-size: var(--fs-body); margin: 0; max-width: 52ch; }
+
+/* ================================================================
+   CONTATO PAGE — redesenho editorial
+   ================================================================ */
+.contato-main { text-align: center; }
+.contato-header { margin-bottom: 0; }
+.contato-header .page-title { text-align: center; }
+.contato-lead { text-align: center; margin-left: auto; margin-right: auto; }
+
+/* Card WhatsApp principal — centralizado */
+.contato-wa-card {
+  max-width: 560px; margin: 0 auto;
+  background: var(--ink-parchment);
+  border: 1px solid var(--ink-rule);
+  padding: 48px 40px;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.contato-wa-icon { flex-shrink: 0; }
+.contato-wa-title {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: var(--fs-h2); margin: 0; letter-spacing: -0.02em;
+  color: var(--ink-deep);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
+.contato-wa-num {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: var(--fs-h3); color: var(--ink-deep); margin: 0;
+}
+.contato-wa-note {
+  font-family: var(--font-display); font-style: italic;
+  font-size: var(--fs-small); color: var(--ink-mute); margin: 0;
+}
+
+/* Grid 3 colunas — canais complementares */
+.contato-canais-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 0; max-width: 840px; margin: 0 auto;
+  border: 1px solid var(--ink-rule);
+}
+.contato-canal {
+  padding: 32px 24px; text-align: center;
+  border-right: 1px solid var(--ink-rule-soft);
+}
+.contato-canal:last-child { border-right: 0; }
+.contato-canal .eyebrow { text-align: center; justify-content: center; display: block; }
+.contato-canal-link {
+  font-family: var(--font-body); font-size: var(--fs-body);
+  color: var(--ink-carmine); text-decoration: none;
+  display: block; margin-top: 8px; line-height: 1.5;
+  transition: color 140ms;
+}
+.contato-canal-link:hover { color: #5c1f13; }
+
+/* Grid 2 colunas — endereço e horários */
+.contato-end-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0; max-width: 840px; margin: 0 auto;
+  border: 1px solid var(--ink-rule); border-top: 0;
+  text-align: left;
+}
+.contato-end-col {
+  padding: 32px 40px;
+  border-right: 1px solid var(--ink-rule-soft);
+}
+.contato-end-col:last-child { border-right: 0; }
+.contato-address {
+  font-family: var(--font-body); font-size: var(--fs-body);
+  line-height: 1.7; color: var(--ink-deep); margin: 0;
+}
+.contato-sch { display: flex; flex-direction: column; gap: 8px; }
+.contato-sch > div { display: flex; justify-content: space-between; gap: 16px; font-family: var(--font-body); font-size: var(--fs-body); padding-bottom: 7px; border-bottom: 1px dotted var(--ink-rule); }
+.contato-sch > div span:first-child { color: var(--ink-mute); }
+
+/* ================================================================
+   SITE FOOTER
+   ================================================================ */
+.site-footer { border-top: 1px solid var(--ink-rule); background: var(--ink-parchment); padding: 64px 48px 40px; margin-top: 96px; }
+.foot-grid { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; }
+.foot-grid p, .foot-address, .foot-pastoral { font-family: var(--font-body); font-size: var(--fs-small); line-height: 1.7; color: var(--ink-deep); margin: 0; }
+.foot-grid .eyebrow { font-size: 10px; margin-bottom: 10px; }
+.foot-link { color: var(--ink-deep); text-decoration: none; border-bottom: 1px dotted var(--ink-rule); transition: color 140ms; font-size: var(--fs-small); }
+.foot-link:hover { color: var(--ink-carmine); }
+.foot-link--row { display: flex; align-items: center; gap: 8px; border-bottom: 0; margin-bottom: 8px; }
+/* Lista de canais digitais no footer */
+.foot-list { list-style: none; padding: 0; margin: 0; }
+.foot-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-family: var(--font-body); font-size: var(--fs-small); }
+.foot-item:last-child { margin-bottom: 0; }
+.foot-item a { color: var(--ink-deep); text-decoration: none; transition: color 140ms; }
+.foot-item a:hover { color: var(--ink-carmine); }
+.foot-icon { width: 16px; height: 16px; color: var(--ink-mute); flex-shrink: 0; vertical-align: middle; }
+.foot-logo { display: block; margin-top: 16px; height: 60px; width: auto; opacity: 0.78; }
+.foot-divider { text-align: center; color: var(--ink-gold); font-family: serif; font-size: 18px; margin: 48px 0 24px; display: block; }
+.foot-note { max-width: 1080px; margin: 0 auto 12px; font-family: var(--font-ui); font-size: var(--fs-mini); color: var(--ink-mute); opacity: 0.7; }
+.foot-mini { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; font-family: var(--font-ui); font-size: var(--fs-mini); letter-spacing: 0.08em; color: var(--ink-mute); }
+.foot-mini .latin { font-family: var(--font-display); font-style: italic; font-size: var(--fs-small); letter-spacing: 0; }
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 900px) {
+  .site-header nav { display: none; }
+  .main, .home-inner { padding-left: 24px; padding-right: 24px; }
+  .chapter-body,
+  .claret-section .chapter-body,
+  .tombamento, .paroco,
+  .claret-founder-grid { grid-template-columns: 1fr; }
+  .chapter-margin, .claret-marginalia { order: -1; }
+  .home-claret, .adoracao-block { grid-template-columns: 1fr; }
+  .home-sac3-grid, .sac-accord-grid,
+  .contribua-outras-grid { grid-template-columns: 1fr; }
+  .sac-accord-deco--wide { grid-column: span 1; }
+  .matrimonio-inner { grid-template-columns: 1fr; }
+  .contato-canais-grid { grid-template-columns: 1fr; }
+  .contato-canal { border-right: 0; border-bottom: 1px solid var(--ink-rule-soft); }
+  .contato-canal:last-child { border-bottom: 0; }
+  .contato-end-grid { grid-template-columns: 1fr; }
+  .contato-end-col { border-right: 0; border-bottom: 1px solid var(--ink-rule-soft); }
+  .contato-end-col:last-child { border-bottom: 0; }
+  .arq-masonry { grid-template-columns: 1fr; }
+  .arq-photo--wide { grid-column: span 1; }
+  .missa-horario-block { padding: 40px 24px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .history-break { margin-left: -24px; margin-right: -24px; }
+  .ed-fig--portrait-float, .ed-fig--portrait-inline { float: none; width: 100%; margin: 0 0 24px; }
+  .int-item-link { grid-template-columns: 40px 1fr 24px; }
+  .int-sub { display: none; }
+  .matrimonio-featured { padding: 40px 24px; }
+  .sac-rica { padding: 32px 24px; }
+}
+
+@media (max-width: 768px) {
+  /* Escala tipográfica mobile */
+  :root {
+    --fs-h1: 40px;
+    --fs-h2: 28px;
+    --fs-h3: 20px;
+    --fs-lead: 16px;
+    --space-section: 64px;
+    --space-block: 32px;
+    --space-element: 16px;
+    --space-tight: 8px;
+  }
+  .hero-fullbleed { min-height: 600px; background-position: center 30%; }
+  .hero-title-light { font-size: 42px; }
+  .hero-stack { padding: 64px 24px 48px; }
+  /* Timeline mobile — trilho à esquerda */
+  .tl-list::before { left: 16px; }
+  .tl-item { grid-template-columns: 20px 1fr; gap: 12px; }
+  .tl-year { display: none; }
+  .tl-dot { margin-top: 4px; }
+}
+
+/* ================================================================
+   PREFERS-REDUCED-MOTION
+   ================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
