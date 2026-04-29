@@ -298,62 +298,80 @@ address { font-style: normal; }
    HERO FULLBLEED
    ================================================================ */
 .hero-fullbleed {
-  position: relative; min-height: 880px;
+  position: relative; min-height: 920px;
   display: flex; flex-direction: column;
   background-image: url('assets/fachada-externa.jpg');
-  background-size: cover; background-position: center 35%;
+  background-size: cover; background-position: center 70%;
   overflow: hidden;
 }
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(180deg,
-    rgba(43,24,16,0.55) 0%,
-    rgba(43,24,16,0.35) 40%,
-    rgba(43,24,16,0.50) 100%);
+    rgba(43,24,16,0.20) 0%,
+    rgba(43,24,16,0.40) 50%,
+    rgba(43,24,16,0.55) 100%);
   pointer-events: none; z-index: 1;
 }
 .hero-stack {
   position: relative; z-index: 2;
   flex: 1; max-width: 1080px; width: 100%; margin: 0 auto;
-  padding: 100px 48px 72px;
+  padding: 48px;
   display: flex; flex-direction: column; align-items: center; text-align: center;
+  justify-content: center;
+  isolation: isolate;
 }
 .hero-eyebrow {
-  font-family: var(--font-ui); font-size: var(--fs-eyebrow); font-weight: 500;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: #A07828; margin-bottom: 24px;
+  font-family: var(--font-ui); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: #E2C87A; margin-bottom: 24px;
 }
 .hero-eyebrow--ornamented {
   display: flex; align-items: center; justify-content: center; gap: 14px;
 }
 .eyebrow-rule {
-  display: inline-block; width: 40px; height: 1px;
-  background: #A07828; opacity: 0.7;
+  display: inline-block; width: 60px; height: 1px;
+  background: #E2C87A; opacity: 0.90;
 }
 .hero-title-light {
   font-family: var(--font-display); font-weight: 400; font-style: italic;
   font-size: 60px; line-height: 1.05; letter-spacing: -0.015em;
   color: #F5EFE6; margin: 0 0 22px; text-wrap: balance;
+  text-align: center;
   font-variation-settings: "opsz" 144, "SOFT" 50;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6), 0 4px 32px rgba(0,0,0,0.5);
 }
-.hero-rule-light { color: var(--ink-gold); font-family: var(--font-ui); font-size: 10px; letter-spacing: 0.8em; margin: 8px 0 28px; }
-.hero-rule-light::before { content: "\2022 \00A0 \2022 \00A0 \2022"; }
+.hero-sub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-cream);
+  opacity: 0.92;
+  margin: 0 auto 32px;
+  max-width: 460px;
+  text-align: center;
+  letter-spacing: 0.005em;
+}
 .hero-lead {
   font-family: var(--font-body); font-weight: 400;
-  font-size: var(--fs-lead); line-height: 1.55;
-  color: #F5EFE6; max-width: 640px; margin: 0 auto 36px;
-  text-align: center;
+  font-size: var(--fs-lead); line-height: 1.65;
+  color: #F5EFE6; max-width: 640px; margin: 32px auto 40px;
+  text-align: left;
+  overflow: hidden;
   text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
-/* Drop cap do hero — branco sólido para contraste sobre a foto */
+/* Drop cap do hero — branco sólido, float left, texto alinha à direita */
 .drop-cap {
   float: left;
   font-family: var(--font-display); font-weight: 700; font-style: normal;
-  font-size: 4em; line-height: 0.85;
-  margin: 0.04em 0.08em 0 0;
+  font-size: 3.75em; line-height: 0.88;
+  margin: 0.04em 0.12em 0 0;
   color: #F5EFE6;
   font-variation-settings: "opsz" 144, "SOFT" 50;
+  shape-outside: margin-box;
+}
+.hero-lead--bv {
+  text-align: center; margin-top: 0;
 }
 .hero-ctas-light { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; justify-content: center; }
 
@@ -362,7 +380,7 @@ address { font-style: normal; }
    ================================================================ */
 .sch-strip {
   background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
-  padding: 56px 48px;
+  padding: 96px 48px;
   text-align: center;
 }
 .sch-strip-orn { color: var(--ink-gold); font-family: serif; font-size: 18px; margin-bottom: 16px; }
@@ -388,12 +406,13 @@ address { font-style: normal; }
 /* ================================================================
    HOME — INTENTIONS
    ================================================================ */
-.intentions { padding: 56px 0 40px; max-width: 780px; }
-.intentions > h2 { font-size: var(--fs-h2); margin: 0 0 12px; }
+.intentions { background: var(--ink-cream); padding: 72px 48px; }
+.intentions h2 { font-size: var(--fs-h2); margin: 0 0 12px; text-align: center; }
+.intentions-wrap { max-width: 780px; margin: 0 auto; }
 .intentions-lead {
   font-family: var(--font-body); font-weight: 500; font-size: var(--fs-body);
-  line-height: 1.6; color: var(--ink-mute); max-width: 56ch;
-  margin: 0 0 32px; letter-spacing: -0.003em;
+  line-height: 1.6; color: var(--ink-mute); max-width: 480px;
+  margin: 16px auto 56px; letter-spacing: -0.003em; text-align: center;
 }
 .int-list { list-style: none; padding: 0; margin: 0; }
 .int-list li { border-top: 1px solid var(--ink-rule); }
@@ -413,40 +432,60 @@ address { font-style: normal; }
 /* ================================================================
    HOME — 3 SACRAMENTOS
    ================================================================ */
-.home-sac3 { padding: 8px 0 48px; }
+.home-sac3 {
+  background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
+  padding: 96px 48px;
+}
+.home-sac3-inner { max-width: 1080px; margin: 0 auto; }
 .home-sac3-hdr { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; gap: 24px; }
 .home-sac3-hdr h2 { margin: 6px 0 0; }
-.home-sac3-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
-.home-sac3-card { background: var(--ink-cream); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: background 140ms, transform 250ms, box-shadow 250ms; }
-.home-sac3-card:hover { background: var(--ink-parchment); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(43,24,16,0.10); }
+.home-sac3-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.home-sac3-card { background: var(--ink-cream); border: 1px solid var(--ink-rule); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: background 200ms, transform 250ms, box-shadow 250ms; }
+.home-sac3-card:hover { background: var(--ink-parchment); border-color: var(--ink-parchment); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(43,24,16,0.08); }
 .home-sac3-card h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-h3); color: var(--ink-deep); margin: 0; letter-spacing: -0.01em; }
 .home-sac3-card p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.6; color: var(--ink-mute); margin: 0; flex: 1; }
+.home-sac3-numeral {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ink-gold);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.home-sac3-rule {
+  width: 32px;
+  height: 1px;
+  background: var(--ink-gold);
+  opacity: 0.5;
+  margin: 12px 0 16px 0;
+}
+.home-sac3-card .wa-circle { background: var(--ink-carmine); }
+.home-sac3-card .wa-circle svg { fill: var(--ink-cream); }
 
 /* ================================================================
    HOME — CLARETIANOS RESUMO
    ================================================================ */
-.home-claret { display: grid; grid-template-columns: 280px 1fr; gap: 56px; align-items: flex-start; padding: 8px 0 48px; }
+.home-claret { background: var(--ink-cream); padding: 72px 48px; }
+.home-claret-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
 .home-claret-text h2 { margin: 8px 0 16px; }
 .home-claret-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 14px; max-width: 52ch; }
 
 /* ================================================================
-   HOME — REDES SOCIAIS
-   ================================================================ */
-.redes { padding: 8px 0 48px; }
-.redes-card-wrap { background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); padding: 40px 48px; max-width: 720px; }
-.redes-card-wrap h2 { margin: 8px 0 14px; }
-.redes-card-wrap p { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink-deep); margin: 0 0 24px; }
-.redes-links { display: flex; flex-direction: column; gap: 12px; }
-.redes-link { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-body); font-size: 16px; color: var(--ink-deep); text-decoration: none; transition: color 140ms; padding-bottom: 4px; border-bottom: 1px solid var(--ink-rule); width: fit-content; }
-.redes-link:hover { color: var(--ink-carmine); }
-.redes-link--wa { color: var(--ink-deep); }
-
-/* ================================================================
    HOME — DÍZIMO CTA
    ================================================================ */
-.dizimo-home { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; padding: 8px 0 48px; border-top: 1px solid var(--ink-rule); flex-wrap: wrap; }
-.dizimo-home h2 { margin: 8px 0 14px; }
-.dizimo-home p { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink-deep); max-width: 52ch; margin: 0; }
+.dizimo-home {
+  background: var(--ink-cream);
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 96px 24px;
+  text-align: center;
+}
+.dizimo-home .eyebrow { margin-bottom: 16px; }
+.dizimo-home h2 { margin: 0 0 24px; }
+.dizimo-home p {
+  font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7;
+  color: var(--ink-deep); max-width: 520px; margin: 0 auto 40px;
+}
 
 /* ================================================================
    RUBRIC (schedule dentro de página)
@@ -590,14 +629,40 @@ address { font-style: normal; }
 .missa-orn { color: var(--ink-gold); font-family: serif; font-size: 12px; opacity: 0.7; }
 .missa-horario-note { font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-mute); margin: 24px 0 0; text-align: center; }
 
-/* Adoração Eucarística — grid 50/50 */
-.adoracao-block { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: flex-start; padding: 8px 0 40px; }
-.adoracao-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 14px; }
-.adoracao-info {
-  background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
-  padding: 20px 24px; margin-top: 16px;
+/* Adoração Eucarística — contemplativo centralizado, sem foto */
+.adoracao-section {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-section) 24px;
 }
-.adoracao-info p { font-family: var(--font-body); font-size: var(--fs-body); color: var(--ink-deep); margin: 0; }
+.adoracao-section h2 { margin-bottom: 16px; }
+.adoracao-lead {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  color: var(--ink-deep);
+  margin: 0;
+}
+.adoracao-horario {
+  margin: 48px auto;
+  max-width: 480px;
+}
+.adoracao-horario-rule {
+  height: 1px;
+  background: var(--ink-rule);
+  margin: 24px auto;
+  width: 100%;
+}
+.adoracao-horario-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 22px;
+  color: var(--ink-carmine);
+  margin: 0;
+  letter-spacing: 0.02em;
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
 
 /* Ano litúrgico */
 .lit-section { padding: 8px 0; }
@@ -636,12 +701,12 @@ address { font-style: normal; }
 .sac-accord-num { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--ink-gold); flex-shrink: 0; }
 .sac-accord-title { font-family: var(--font-display); font-weight: 400; font-size: 22px; color: var(--ink-deep); letter-spacing: -0.015em; flex: 1; font-variation-settings: "opsz" 72, "SOFT" 50; }
 .sac-accord-chevron { color: var(--ink-mute); margin-left: auto; flex-shrink: 0; }
-/* Accordion animation via grid-template-rows */
-.sac-accord-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 400ms ease-out; }
-.sac-accord-card.open .sac-accord-body { grid-template-rows: 1fr; }
-/* Layout do conteúdo aberto: block para floats funcionarem */
+/* Accordion: fechado = oculto, aberto = visível */
+.sac-accord-body { display: none; }
+.sac-accord-card.open .sac-accord-body { display: block; }
+/* Layout do conteúdo aberto: overflow hidden para conter floats */
 .sac-accord-inner {
-  overflow: hidden; min-height: 0;
+  overflow: hidden;
   padding: 0 24px 28px;
 }
 .sac-accord-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 12px; }
@@ -652,33 +717,65 @@ address { font-style: normal; }
 .sac-accord-deco--wide { grid-column: span 2; }
 .sac-accord-deco--wide .ed-fig-frame img { aspect-ratio: 16/9; max-height: 300px; }
 
-/* Matrimônio — bloco em destaque fora do accordion */
+/* Matrimônio — bloco em destaque fora do accordion — redesenhado */
 .matrimonio-featured {
   background: var(--ink-parchment);
   border-top: 1px solid var(--ink-gold);
   padding: 56px 48px;
   margin: 0;
 }
-.matrimonio-inner {
+.matrimonio-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.matrimonio-numeral {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 32px;
+  color: var(--ink-gold);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+  flex-shrink: 0;
+}
+.matrimonio-grid {
   display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 56px;
-  align-items: flex-start;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
   max-width: 960px;
 }
-.matrimonio-text h2 { margin: 8px 0 16px; }
-.matrimonio-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 16px; color: var(--ink-deep); }
-.matrimonio-text .matrimonio-requisitos {
-  background: var(--ink-cream); border: 1px solid var(--ink-rule);
-  padding: 16px 20px; margin: 16px 0 20px;
-  font-size: var(--fs-small); color: var(--ink-mute); line-height: 1.65;
+.matrimonio-text h2 { margin: 0 0 16px; }
+.matrimonio-lead {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 20px; line-height: 1.55; color: var(--ink-deep);
+  margin: 0 0 16px;
+  font-variation-settings: "opsz" 72, "SOFT" 50;
 }
+.matrimonio-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 20px; color: var(--ink-deep); }
+.matrimonio-cta { margin-top: 8px; }
 .matrimonio-photo { margin: 0; }
 
-/* RICA block */
-.sac-rica { margin: 48px auto 0; padding: 40px 48px; background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); max-width: 720px; }
-.sac-rica h3 { font-family: var(--font-display); font-weight: 400; font-style: italic; font-size: var(--fs-h2); letter-spacing: -0.015em; margin: 8px 0 16px; color: var(--ink-deep); font-variation-settings: "opsz" 96, "SOFT" 50; }
-.sac-rica p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.65; max-width: 58ch; margin: 0 0 14px; }
+/* RICA — sem background, alinhado como conteúdo normal */
+.rica-section { max-width: 720px; margin: var(--space-section) 0; }
+.rica-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.rica-numeral {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 32px;
+  color: var(--ink-gold);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+  flex-shrink: 0;
+}
+.rica-section h2 { margin: 0; }
+.rica-section p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.65; max-width: 58ch; margin: 0 0 14px; }
 
 /* ================================================================
    CONTRIBUA PAGE
@@ -729,8 +826,20 @@ address { font-style: normal; }
   border: 1px solid var(--ink-rule);
   padding: 48px 40px;
   display: flex; flex-direction: column; align-items: center; gap: 16px;
+  text-align: center;
 }
-.contato-wa-icon { flex-shrink: 0; }
+.contato-wa-icon {
+  width: 80px; height: 80px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+.contato-wa-icon svg {
+  width: 44px; height: 44px;
+  fill: white; display: block;
+}
 .contato-wa-title {
   font-family: var(--font-display); font-weight: 400;
   font-size: var(--fs-h2); margin: 0; letter-spacing: -0.02em;
@@ -746,18 +855,27 @@ address { font-style: normal; }
   font-size: var(--fs-small); color: var(--ink-mute); margin: 0;
 }
 
-/* Grid 3 colunas — canais complementares */
+/* Eyebrow com ícone Lucide */
+.eyebrow-with-icon {
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.eyebrow-icon {
+  width: 14px; height: 14px;
+  color: var(--ink-gold); flex-shrink: 0;
+}
+
+/* Grid 3 colunas — canais complementares, sem borda externa */
 .contato-canais-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: 0; max-width: 840px; margin: 0 auto;
-  border: 1px solid var(--ink-rule);
+  border-bottom: 1px solid var(--ink-rule);
 }
 .contato-canal {
   padding: 32px 24px; text-align: center;
-  border-right: 1px solid var(--ink-rule-soft);
+  border-right: 1px solid var(--ink-rule);
 }
-.contato-canal:last-child { border-right: 0; }
-.contato-canal .eyebrow { text-align: center; justify-content: center; display: block; }
+.contato-canal:last-child { border-right: none; }
+.contato-canal .eyebrow { text-align: center; justify-content: center; display: flex; }
 .contato-canal-link {
   font-family: var(--font-body); font-size: var(--fs-body);
   color: var(--ink-carmine); text-decoration: none;
@@ -766,18 +884,17 @@ address { font-style: normal; }
 }
 .contato-canal-link:hover { color: #5c1f13; }
 
-/* Grid 2 colunas — endereço e horários */
+/* Grid 2 colunas — endereço e horários, sem borda externa */
 .contato-end-grid {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 0; max-width: 840px; margin: 0 auto;
-  border: 1px solid var(--ink-rule); border-top: 0;
   text-align: left;
 }
 .contato-end-col {
   padding: 32px 40px;
-  border-right: 1px solid var(--ink-rule-soft);
+  border-right: 1px solid var(--ink-rule);
 }
-.contato-end-col:last-child { border-right: 0; }
+.contato-end-col:last-child { border-right: none; }
 .contato-address {
   font-family: var(--font-body); font-size: var(--fs-body);
   line-height: 1.7; color: var(--ink-deep); margin: 0;
@@ -825,12 +942,12 @@ address { font-style: normal; }
   .contribua-outras-grid { grid-template-columns: 1fr; }
   .sac-accord-deco--wide { grid-column: span 1; }
   .matrimonio-inner { grid-template-columns: 1fr; }
-  .contato-canais-grid { grid-template-columns: 1fr; }
-  .contato-canal { border-right: 0; border-bottom: 1px solid var(--ink-rule-soft); }
-  .contato-canal:last-child { border-bottom: 0; }
+  .contato-canais-grid { grid-template-columns: 1fr; border-bottom: 0; }
+  .contato-canal { border-right: none; border-bottom: 1px solid var(--ink-rule); }
+  .contato-canal:last-child { border-bottom: none; }
   .contato-end-grid { grid-template-columns: 1fr; }
-  .contato-end-col { border-right: 0; border-bottom: 1px solid var(--ink-rule-soft); }
-  .contato-end-col:last-child { border-bottom: 0; }
+  .contato-end-col { border-right: none; border-bottom: 1px solid var(--ink-rule); }
+  .contato-end-col:last-child { border-bottom: none; }
   .arq-masonry { grid-template-columns: 1fr; }
   .arq-photo--wide { grid-column: span 1; }
   .missa-horario-block { padding: 40px 24px; }
@@ -855,9 +972,15 @@ address { font-style: normal; }
     --space-element: 16px;
     --space-tight: 8px;
   }
-  .hero-fullbleed { min-height: 600px; background-position: center 30%; }
+  .hero-fullbleed { min-height: 600px; background-position: center 10%; }
   .hero-title-light { font-size: 42px; }
   .hero-stack { padding: 64px 24px 48px; }
+  .hero-sub { font-size: 14px; max-width: 360px; }
+  .sch-strip { padding-top: 64px; padding-bottom: 64px; }
+  .home-sac3 { padding: 64px 24px; }
+  .home-sac3-grid { grid-template-columns: 1fr; }
+  .home-claret-inner { grid-template-columns: 1fr; }
+  .dizimo-home { padding: 64px 24px; }
   /* Timeline mobile — trilho à esquerda */
   .tl-list::before { left: 16px; }
   .tl-item { grid-template-columns: 20px 1fr; gap: 12px; }
