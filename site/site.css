@@ -197,10 +197,19 @@ address { font-style: normal; }
   display: block; width: 100%; height: auto;
   object-fit: cover;
 }
-.ed-fig figcaption, .ed-fig-cap {
-  font-family: var(--font-ui); font-size: var(--fs-small); font-weight: 400;
-  letter-spacing: 0.04em; color: var(--ink-mute);
-  margin-top: 10px; font-style: italic;
+.ed-fig figcaption, .ed-fig-cap,
+.photo-frame figcaption, .photo-caption {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-deep);
+  opacity: 0.7;
+  letter-spacing: 0;
+  text-transform: none;
+  margin-top: 12px;
+  text-align: left;
   display: block;
 }
 /* Categoria A — hero de seção */
@@ -454,14 +463,6 @@ address { font-style: normal; }
 .home-sac3-card .wa-circle { background: var(--ink-carmine); }
 .home-sac3-card .wa-circle svg { fill: var(--ink-cream); }
 
-/* ================================================================
-   HOME — CLARETIANOS RESUMO
-   ================================================================ */
-.home-claret { background: var(--ink-cream); padding: 72px 48px; }
-.home-claret-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
-.home-claret img { object-position: center top; }
-.home-claret-text h2 { margin: 8px 0 16px; }
-.home-claret-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 14px; max-width: 52ch; }
 
 /* ================================================================
    HOME — DÍZIMO / CONSERVAÇÃO
@@ -567,19 +568,13 @@ address { font-style: normal; }
 .arq-masonry {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 48px;
   margin-top: 8px;
 }
 .arq-photo { margin: 0; }
 .arq-photo--wide { grid-column: span 2; }
 .arq-photo--wide .ed-fig-frame img { aspect-ratio: 16/9; max-height: 480px; }
 .arq-photo .ed-fig-frame img { aspect-ratio: 3/4; max-height: 360px; }
-.arq-photo .ed-fig-cap,
-.arq-photo--wide .ed-fig-cap {
-  font-family: var(--font-ui); font-size: 10px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-gold);
-  margin-top: 8px; font-style: normal;
-}
 
 /* Timeline */
 .tl-section { padding: 8px 0; }
@@ -595,18 +590,56 @@ address { font-style: normal; }
 .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--ink-carmine); margin-top: 6px; position: relative; z-index: 1; flex-shrink: 0; }
 .tl-event { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.5; color: var(--ink-deep); padding-top: 1px; }
 
-/* Tombamento */
-.tombamento { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: flex-start; padding: 8px 0; }
-.tombamento-col p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); max-width: 54ch; margin: 0 0 16px; }
+/* Editorial block — foto + texto (padrão reutilizável) */
+.editorial-block { padding: 80px 24px; }
+.editorial-block-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.editorial-block-text .eyebrow { margin-bottom: 12px; }
+.editorial-block-text h2 { margin: 8px 0 16px; }
+.editorial-block-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 16px; max-width: 52ch; }
 
-/* Visita */
-.visita-block { padding: 8px 0; max-width: 720px; margin-left: auto; margin-right: auto; }
-.visita-lead { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--ink-deep); margin: 0 0 14px; }
-.visita-block p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); max-width: 58ch; margin: 0 0 16px; }
-.visita-horarios { background: var(--ink-parchment); border-top: 1px solid var(--ink-gold); padding: 20px 24px; margin: 16px 0 20px; }
-.visita-horarios ul { list-style: none; padding: 0; margin: 0; }
-.visita-horarios li { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); padding: 4px 0; border-bottom: 1px dotted var(--ink-rule-soft); }
-.visita-horarios li:last-child { border-bottom: 0; }
+/* Visite a Igreja */
+.visit-block { padding: 80px 24px; background: var(--ink-cream); }
+.visit-block-inner { max-width: 640px; margin: 0 auto; }
+.visit-block .eyebrow { margin-bottom: 16px; }
+.visit-block h3 {
+  font-family: var(--font-display); font-style: italic; font-weight: 400;
+  font-size: 28px; line-height: 1.15; color: var(--ink-deep); margin: 0 0 16px;
+}
+.visit-lead {
+  font-family: var(--font-display); font-style: italic; font-size: 17px;
+  color: var(--ink-deep); opacity: 0.85; margin: 0 0 24px;
+}
+.visit-block p {
+  font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7;
+  color: var(--ink-deep); margin: 0 0 16px;
+}
+.visit-hours { border-top: 1px solid var(--ink-rule); margin: 32px 0; }
+.visit-hours-row {
+  display: grid; grid-template-columns: 200px 1fr; gap: 24px;
+  padding: 16px 0; border-bottom: 1px solid var(--ink-rule); align-items: baseline;
+}
+.visit-hours-label {
+  font-family: var(--font-body); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-gold);
+}
+.visit-hours-value { font-family: var(--font-body); font-size: 15px; color: var(--ink-deep); }
+.visit-guide { font-size: 14px; color: var(--ink-deep); opacity: 0.8; margin: 24px 0; }
+
+/* WA monocromático carmim (páginas de conteúdo, exceto Contato e Footer) */
+.wa-btn--mono .wa-circle--mono {
+  background: transparent;
+  border: 1px solid var(--ink-carmine);
+}
+.wa-btn--mono .wa-circle--mono svg { fill: var(--ink-carmine); }
+.sac-accord-wa .wa-circle { background: var(--ink-carmine); }
+.sac-accord-wa .wa-circle svg { fill: var(--ink-cream); }
 
 /* ================================================================
    CLARETIANOS
@@ -984,10 +1017,10 @@ address { font-style: normal; }
   .main, .home-inner { padding-left: 24px; padding-right: 24px; }
   .chapter-body,
   .claret-section .chapter-body,
-  .tombamento, .paroco,
+  .editorial-block-grid, .paroco,
   .claret-founder-grid { grid-template-columns: 1fr; }
   .chapter-margin, .claret-marginalia { order: -1; }
-  .home-claret, .adoracao-block { grid-template-columns: 1fr; }
+  .adoracao-block { grid-template-columns: 1fr; }
   .home-sac3-grid, .sac-accord-grid,
   .contribua-outras-grid { grid-template-columns: 1fr; }
   .sac-accord-deco--wide { grid-column: span 1; }
@@ -1029,11 +1062,14 @@ address { font-style: normal; }
   .sch-strip { padding-top: 64px; padding-bottom: 64px; }
   .home-sac3 { padding: 64px 24px; }
   .home-sac3-grid { grid-template-columns: 1fr; }
-  .home-claret-inner { grid-template-columns: 1fr; }
   .dizimo-home { padding: 64px 24px; }
   .dizimo-home-header { margin-bottom: 40px; }
   .dizimo-home-item { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
   .dizimo-home-footer { margin-top: 40px; }
+  .editorial-block { padding: 48px 24px; }
+  .editorial-block-grid { grid-template-columns: 1fr; gap: 32px; }
+  .visit-block { padding: 48px 24px; }
+  .visit-hours-row { grid-template-columns: 1fr; gap: 4px; }
   /* Timeline mobile — trilho à esquerda */
   .tl-list::before { left: 16px; }
   .tl-item { grid-template-columns: 20px 1fr; gap: 12px; }
