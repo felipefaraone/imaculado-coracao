@@ -440,18 +440,10 @@ address { font-style: normal; }
 .home-sac3-hdr { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 28px; gap: 24px; }
 .home-sac3-hdr h2 { margin: 6px 0 0; }
 .home-sac3-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.home-sac3-card { background: var(--ink-cream); border: 1px solid var(--ink-rule); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: background 200ms, transform 250ms, box-shadow 250ms; }
-.home-sac3-card:hover { background: var(--ink-parchment); border-color: var(--ink-parchment); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(43,24,16,0.08); }
+.home-sac3-card { background: var(--ink-cream); border: 1px solid var(--ink-rule); padding: 28px 24px; display: flex; flex-direction: column; gap: 10px; transition: border-color 200ms, transform 250ms, box-shadow 250ms; }
+.home-sac3-card:hover { background: var(--ink-cream); border-color: var(--ink-gold); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(43,24,16,0.12); }
 .home-sac3-card h3 { font-family: var(--font-display); font-weight: 400; font-size: var(--fs-h3); color: var(--ink-deep); margin: 0; letter-spacing: -0.01em; }
 .home-sac3-card p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.6; color: var(--ink-mute); margin: 0; flex: 1; }
-.home-sac3-numeral {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 14px;
-  color: var(--ink-gold);
-  margin-bottom: 16px;
-  letter-spacing: 0.02em;
-}
 .home-sac3-rule {
   width: 32px;
   height: 1px;
@@ -467,24 +459,82 @@ address { font-style: normal; }
    ================================================================ */
 .home-claret { background: var(--ink-cream); padding: 72px 48px; }
 .home-claret-inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
+.home-claret img { object-position: center top; }
 .home-claret-text h2 { margin: 8px 0 16px; }
 .home-claret-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 14px; max-width: 52ch; }
 
 /* ================================================================
-   HOME — DÍZIMO CTA
+   HOME — DÍZIMO / CONSERVAÇÃO
    ================================================================ */
 .dizimo-home {
   background: var(--ink-cream);
+  padding: 96px 24px;
+}
+.dizimo-home-inner {
   max-width: 640px;
   margin: 0 auto;
-  padding: 96px 24px;
-  text-align: center;
 }
-.dizimo-home .eyebrow { margin-bottom: 16px; }
-.dizimo-home h2 { margin: 0 0 24px; }
-.dizimo-home p {
-  font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7;
-  color: var(--ink-deep); max-width: 520px; margin: 0 auto 40px;
+.dizimo-home-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.div-fleuron-mark {
+  color: var(--ink-gold);
+  font-size: 16px;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.dizimo-home-header .eyebrow {
+  margin-bottom: 20px;
+}
+.dizimo-home-header h2 {
+  margin: 0;
+}
+.dizimo-home-list {
+  border-top: 1px solid var(--ink-rule);
+}
+.dizimo-home-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--ink-rule);
+  align-items: baseline;
+}
+.dizimo-home-item-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-gold);
+}
+.dizimo-home-item-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--ink-deep);
+  margin: 0;
+}
+.dizimo-home-footer {
+  text-align: center;
+  margin-top: 56px;
+}
+.dizimo-home-link {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-carmine);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--ink-carmine);
+  padding-bottom: 2px;
+  transition: opacity 200ms;
+}
+.dizimo-home-link:hover {
+  opacity: 0.7;
 }
 
 /* ================================================================
@@ -981,6 +1031,9 @@ address { font-style: normal; }
   .home-sac3-grid { grid-template-columns: 1fr; }
   .home-claret-inner { grid-template-columns: 1fr; }
   .dizimo-home { padding: 64px 24px; }
+  .dizimo-home-header { margin-bottom: 40px; }
+  .dizimo-home-item { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
+  .dizimo-home-footer { margin-top: 40px; }
   /* Timeline mobile — trilho à esquerda */
   .tl-list::before { left: 16px; }
   .tl-item { grid-template-columns: 20px 1fr; gap: 12px; }
