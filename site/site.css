@@ -642,8 +642,9 @@ address { font-style: normal; }
   border: 1px solid var(--ink-carmine);
 }
 .wa-btn--mono .wa-circle--mono svg { fill: var(--ink-carmine); }
-.sac-accord-wa .wa-circle { background: var(--ink-carmine); }
-.sac-accord-wa .wa-circle svg { fill: var(--ink-cream); }
+/* Hover: ícone e borda ficam visíveis sobre fundo carmim */
+.wa-btn--mono:hover .wa-circle--mono { border-color: var(--ink-cream); }
+.wa-btn--mono:hover .wa-circle--mono svg { color: var(--ink-cream) !important; fill: var(--ink-cream) !important; }
 
 /* ================================================================
    CLARETIANOS
@@ -694,7 +695,7 @@ address { font-style: normal; }
 /* Horários — layout editorial vertical */
 .missa-horario-block {
   background: var(--ink-parchment); border-top: 1px solid var(--ink-gold);
-  padding: 56px 48px; margin: 32px 0; max-width: 680px;
+  padding: 56px 48px; margin: 32px 0;
 }
 .missa-group { text-align: center; padding: 32px 0; border-top: 1px solid var(--ink-rule); }
 .missa-group:first-of-type { border-top: 0; padding-top: 0; }
@@ -715,12 +716,10 @@ address { font-style: normal; }
 .missa-orn { color: var(--ink-gold); font-family: serif; font-size: 12px; opacity: 0.7; }
 .missa-horario-note { font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-mute); margin: 24px 0 0; text-align: center; }
 
-/* Adoração Eucarística — contemplativo centralizado, sem foto */
+/* Adoração Eucarística */
 .adoracao-section {
-  max-width: 640px;
-  margin: 0 auto;
-  text-align: center;
-  padding: var(--space-section) 24px;
+  text-align: left;
+  padding: var(--space-section) 0;
 }
 .adoracao-section h2 { margin-bottom: 16px; }
 .adoracao-lead {
@@ -774,7 +773,7 @@ address { font-style: normal; }
    SACRAMENTOS ACCORDION
    ================================================================ */
 .sac-accord-wrap { margin-top: 32px; }
-.sac-accord-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
+.sac-accord-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
 .sac-accord-card { background: var(--ink-cream); }
 .sac-accord-card.open { background: var(--ink-parchment); }
 .sac-accord-header {
@@ -797,70 +796,9 @@ address { font-style: normal; }
 }
 .sac-accord-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; color: var(--ink-deep); margin: 0 0 12px; }
 .sac-accord-text p:last-child { margin: 0; }
-.sac-accord-wa { display: inline-flex; margin-top: 8px; }
-/* Slot decorativo */
-.sac-accord-deco { background: var(--ink-cream); padding: 28px; display: flex; align-items: center; justify-content: center; }
-.sac-accord-deco--wide { grid-column: span 2; }
-.sac-accord-deco--wide .ed-fig-frame img { aspect-ratio: 16/9; max-height: 300px; }
-
-/* Matrimônio — bloco em destaque fora do accordion — redesenhado */
-.matrimonio-featured {
-  background: var(--ink-parchment);
-  border-top: 1px solid var(--ink-gold);
-  padding: 56px 48px;
-  margin: 0;
-}
-.matrimonio-header {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
-}
-.matrimonio-numeral {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 32px;
-  color: var(--ink-gold);
-  font-variation-settings: "opsz" 96, "SOFT" 50;
-  flex-shrink: 0;
-}
-.matrimonio-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
-  max-width: 960px;
-}
-.matrimonio-text h2 { margin: 0 0 16px; }
-.matrimonio-lead {
-  font-family: var(--font-display); font-style: italic; font-weight: 400;
-  font-size: 20px; line-height: 1.55; color: var(--ink-deep);
-  margin: 0 0 16px;
-  font-variation-settings: "opsz" 72, "SOFT" 50;
-}
-.matrimonio-text p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.7; max-width: 52ch; margin: 0 0 20px; color: var(--ink-deep); }
-.matrimonio-cta { margin-top: 8px; }
-.matrimonio-photo { margin: 0; }
-
 /* RICA — sem background, alinhado como conteúdo normal */
 .rica-section { max-width: 720px; margin: var(--space-section) 0; }
-.rica-header {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 32px;
-}
-.rica-numeral {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 32px;
-  color: var(--ink-gold);
-  font-variation-settings: "opsz" 96, "SOFT" 50;
-  flex-shrink: 0;
-}
-.rica-section h2 { margin: 0; }
+.rica-section h2 { margin: 0 0 16px; }
 .rica-section p { font-family: var(--font-body); font-size: var(--fs-body); line-height: 1.65; max-width: 58ch; margin: 0 0 14px; }
 
 /* ================================================================

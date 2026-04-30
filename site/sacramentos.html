@@ -40,16 +40,25 @@
   <main class="main">
 
     <!-- Cabeçalho -->
-    <div class="eyebrow">Vida sacramental</div>
-    <h1 class="page-title">Os Sacramentos</h1>
-    <p class="page-lead">Sete sinais visíveis da graça invisível. A Igreja os celebra desde os tempos apostólicos.</p>
+    <!-- Sub-headline parafraseia CIC 1131. Frase tradicional da catequese
+         católica. Aceitável; revisar com Pe. Wellington antes de publicar
+         caso queira citação literal. -->
+    <div>
+      <div class="eyebrow">Vida sacramental</div>
+      <h1 class="page-title">Os Sacramentos.</h1>
+      <p class="page-lead">Sete sinais visíveis da graça invisível, que a Igreja celebra desde os tempos apostólicos como portas de acesso à vida em Cristo.</p>
+    </div>
 
-    <!-- Accordion de 7 sacramentos + slot decorativo -->
+    <div class="ornamento-coracao" role="presentation" aria-hidden="true" style="margin: var(--space-block) auto;"></div>
+
+    <!-- Sete Sacramentos — accordion vertical, um por vez -->
     <div class="sac-accord-wrap fade-in">
       <div class="sac-accord-grid">
 
         <!-- I. BATISMO -->
-        <!-- ⚠ PLACEHOLDER — Pe. Wellington vai fornecer texto específico. -->
+        <!-- REVISÃO PASTORAL: confirmar com Pe. Wellington os detalhes de
+             preparação (encontros, materiais) e a periodicidade das
+             celebrações de Batismo desta paróquia. -->
         <article class="sac-accord-card" id="batismo">
           <button class="sac-accord-header" aria-expanded="false">
             <span class="sac-accord-num">I</span>
@@ -61,25 +70,54 @@
           <div class="sac-accord-body">
             <div class="sac-accord-inner">
               <div class="sac-accord-text">
-                <p>O Batismo é a porta que abre o acesso aos demais Sacramentos. Marca o início da vida cristã. Para bebês, crianças e adultos.</p>
+                <p>O nascimento para a vida da graça. Pelo Batismo, somos incorporados à Igreja e tornados filhos de Deus. Aqui, batizamos crianças e adultos.</p>
               </div>
               <figure class="doctrine">
                 <div class="doctrine-text">
-                  <blockquote>"O Batismo é o fundamento de toda a vida cristã, o pórtico da vida no Espírito e a porta que abre o acesso aos outros Sacramentos."</blockquote>
+                  <blockquote>"O Batismo é o fundamento de toda a vida cristã, o pórtico da vida no Espírito e a porta que abre o acesso aos outros sacramentos."</blockquote>
                 </div>
-                <figcaption>Catecismo da Igreja Católica, §1213</figcaption>
+                <figcaption>Catecismo da Igreja Católica, n. 1213</figcaption>
               </figure>
-              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+agendamento+do+Batismo." class="wa-btn sac-accord-wa" target="_blank" rel="noopener">
-                <span class="wa-circle" style="width:24px;height:24px;" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div class="eyebrow eyebrow-gold" style="margin: 32px 0 0;">Como funciona aqui</div>
+              <div class="visit-hours">
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Para quem</span>
+                  <span class="visit-hours-value">Bebês, crianças e adultos.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Idade recomendada</span>
+                  <span class="visit-hours-value">Para bebês, nas primeiras semanas de vida (CIC n. 867).</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Padrinhos</span>
+                  <span class="visit-hours-value">Católicos batizados e crismados, com pelo menos 16 anos, levando vida coerente com a fé (CIC n. 874).</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Preparação</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">[Encontro com os pais e padrinhos antes da celebração — detalhes pela secretaria.]</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Celebração</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">[Frequência a confirmar com a paróquia.]</span>
+                </div>
+              </div>
+              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+agendamento+do+Batismo."
+                 class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+                <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </span>
-                <span>Informações sobre Batismo</span>
+                <span>Falar sobre Batismo</span>
               </a>
             </div>
           </div>
         </article>
 
-        <!-- II. EUCARISTIA -->
+        <!-- II. EUCARISTIA E PRIMEIRA COMUNHÃO -->
+        <!-- REVISÃO PASTORAL: confirmar com Pe. Wellington calendário e
+             duração da catequese de iniciação, datas das celebrações de
+             Primeira Comunhão. -->
         <article class="sac-accord-card" id="eucaristia">
           <button class="sac-accord-header" aria-expanded="false">
             <span class="sac-accord-num">II</span>
@@ -91,26 +129,53 @@
           <div class="sac-accord-body">
             <div class="sac-accord-inner">
               <div class="sac-accord-text">
-                <p>A Eucaristia é o centro da vida cristã, recebida em cada Missa por todo católico em estado de graça. A Catequese prepara crianças (por volta de 7–10 anos) para receber a Primeira Comunhão, em processo de um ano ou mais.</p>
+                <p>O alimento essencial da vida cristã. A Eucaristia é Cristo presente, Corpo, Sangue, Alma e Divindade. Toda Missa é celebração eucarística. A Primeira Comunhão é o momento em que a criança recebe pela primeira vez.</p>
               </div>
               <figure class="doctrine">
                 <div class="doctrine-text">
-                  <blockquote>"A Eucaristia é fonte e ápice de toda a vida cristã."</blockquote>
+                  <blockquote>"A Eucaristia é a fonte e o ápice de toda a vida cristã."</blockquote>
                 </div>
-                <figcaption>Lumen Gentium, §11</figcaption>
+                <figcaption>Concílio Vaticano II, Lumen Gentium, n. 11</figcaption>
               </figure>
-              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+a+Catequese+e+a+Primeira+Comuni%C3%A3o." class="wa-btn sac-accord-wa" target="_blank" rel="noopener">
-                <span class="wa-circle" style="width:24px;height:24px;" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div class="eyebrow eyebrow-gold" style="margin: 32px 0 0;">Como funciona aqui</div>
+              <div class="visit-hours">
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Primeira Comunhão</span>
+                  <span class="visit-hours-value">A partir dos 7–8 anos, idade da razão, após catequese de iniciação.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Catequese</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">[Duração e calendário a confirmar com a paróquia.]</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Pré-requisito</span>
+                  <span class="visit-hours-value">Ser batizado (CIC n. 842).</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Celebração</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">[Datas das celebrações de Primeira Comunhão a confirmar.]</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Eucaristia diária</span>
+                  <span class="visit-hours-value">Toda Missa. <a href="missas.html" style="color:var(--ink-carmine);">Ver os horários.</a></span>
+                </div>
+              </div>
+              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+a+Catequese+e+a+Primeira+Comuni%C3%A3o."
+                 class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+                <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </span>
-                <span>Informações sobre Catequese</span>
+                <span>Falar sobre Catequese</span>
               </a>
             </div>
           </div>
         </article>
 
         <!-- III. CRISMA -->
-        <!-- ⚠ PLACEHOLDER — Pe. Wellington vai fornecer texto específico. -->
+        <!-- REVISÃO PASTORAL: confirmar idade mínima, duração da preparação
+             e frequência das celebrações de Crisma com Pe. Wellington. -->
         <article class="sac-accord-card" id="crisma">
           <button class="sac-accord-header" aria-expanded="false">
             <span class="sac-accord-num">III</span>
@@ -122,26 +187,59 @@
           <div class="sac-accord-body">
             <div class="sac-accord-inner">
               <div class="sac-accord-text">
-                <p>A Crisma completa a graça batismal e sela o fiel com o Espírito Santo, tornando-o adulto na fé. Não é um rito de saída da Igreja; é uma entrada mais profunda.</p>
+                <p>O fortalecimento pelo Espírito Santo. A Crisma não é rito de saída da Igreja — é uma entrada mais profunda. O batizado recebe o Espírito em plenitude e é fortalecido para testemunhar a fé.</p>
               </div>
               <figure class="doctrine">
                 <div class="doctrine-text">
                   <blockquote>"Com a Crisma, os batizados são mais perfeitamente vinculados à Igreja e enriquecidos com especial força do Espírito Santo."</blockquote>
                 </div>
-                <figcaption>Catecismo da Igreja Católica, §1285</figcaption>
+                <figcaption>Catecismo da Igreja Católica, n. 1285</figcaption>
               </figure>
-              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+a+Crisma." class="wa-btn sac-accord-wa" target="_blank" rel="noopener">
-                <span class="wa-circle" style="width:24px;height:24px;" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div class="eyebrow eyebrow-gold" style="margin: 32px 0 0;">Como funciona aqui</div>
+              <div class="visit-hours">
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Para quem</span>
+                  <span class="visit-hours-value">Adolescentes, jovens e adultos batizados.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Idade</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">[Idade mínima e turmas a confirmar com a paróquia.]</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Preparação</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">[Duração da catequese de Crisma a confirmar.]</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Padrinhos</span>
+                  <span class="visit-hours-value">Católicos crismados, com pelo menos 16 anos.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Celebração</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">Presidida pelo bispo. [Frequência a confirmar.]</span>
+                </div>
+              </div>
+              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+a+Crisma."
+                 class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+                <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </span>
-                <span>Informações sobre Crisma</span>
+                <span>Falar sobre Crisma</span>
               </a>
             </div>
           </div>
         </article>
 
         <!-- IV. CONFISSÃO -->
-        <!-- ⚠ PLACEHOLDER — Confirmar horários e procedimentos com a secretaria. -->
+        <!-- HORÁRIOS DE CONFISSÃO: a confirmar com Pe. Wellington antes
+             de publicar. Source of truth marca como "procedimento específico
+             desta paróquia a confirmar". COMO EDITAR: substitua os
+             placeholders entre [colchetes] pelos horários reais de cada dia.
+             Se algum dia não tiver Confissão, troque a linha por "Não há
+             Confissão neste dia" ou remova a linha inteira mantendo o
+             padrão. -->
         <article class="sac-accord-card" id="confissao">
           <button class="sac-accord-header" aria-expanded="false">
             <span class="sac-accord-num">IV</span>
@@ -152,32 +250,64 @@
           </button>
           <div class="sac-accord-body">
             <div class="sac-accord-inner">
-              <figure class="ed-fig ed-fig--portrait-inline">
-                <div class="ed-fig-frame">
-                  <img src="assets/confessionario.jpg" alt="O confessionário" loading="lazy"/>
+              <div class="editorial-block-grid" style="gap: 48px; align-items: start;">
+                <!-- Coluna esquerda: texto + citação + horários + botão -->
+                <div>
+                  <div class="sac-accord-text">
+                    <p>A misericórdia concreta da Igreja. Se faz tempo que você não se confessa, pode voltar — sem receio. A Igreja recebe quem volta.</p>
+                  </div>
+                  <figure class="doctrine">
+                    <div class="doctrine-text">
+                      <blockquote>"Quem tem consciência de pecado grave não deve celebrar a missa nem comungar sem recorrer antes à confissão sacramental."</blockquote>
+                    </div>
+                    <figcaption>Catecismo da Igreja Católica, n. 916</figcaption>
+                  </figure>
+                  <div class="eyebrow eyebrow-gold" style="margin: 32px 0 0;">Horários de Confissão</div>
+                  <div class="visit-hours">
+                    <div class="visit-hours-row">
+                      <span class="visit-hours-label">Segunda a sexta</span>
+                      <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                      <span class="visit-hours-value">[horário a confirmar com a paróquia]</span>
+                    </div>
+                    <div class="visit-hours-row">
+                      <span class="visit-hours-label">Sábado</span>
+                      <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                      <span class="visit-hours-value">[horário a confirmar com a paróquia]</span>
+                    </div>
+                    <div class="visit-hours-row">
+                      <span class="visit-hours-label">Domingo</span>
+                      <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                      <span class="visit-hours-value">[horário a confirmar com a paróquia]</span>
+                    </div>
+                    <div class="visit-hours-row">
+                      <span class="visit-hours-label">Agendamento individual</span>
+                      <span class="visit-hours-value">Sob demanda, pelo WhatsApp.</span>
+                    </div>
+                  </div>
+                  <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+Confiss%C3%A3o."
+                     class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+                    <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </span>
+                    <span>Agendar Confissão</span>
+                  </a>
                 </div>
-                <figcaption class="ed-fig-cap">O confessionário, onde a Igreja recebe quem volta.</figcaption>
-              </figure>
-              <div class="sac-accord-text">
-                <p>Se faz anos que não se confessa, pode voltar sem receio. A Igreja não mede o tempo, mede a disposição de voltar. Se precisar de ajuda para se preparar, avise o padre antes. Em geral, atendemos Confissões antes das Missas. Para horário específico, fale no WhatsApp.</p>
+                <!-- Coluna direita: foto -->
+                <figure class="ed-fig">
+                  <div class="ed-fig-frame">
+                    <img src="assets/confessionario.jpg" alt="O confessionário em madeira da Igreja" loading="lazy"/>
+                  </div>
+                  <figcaption class="ed-fig-cap" style="font-style: italic;">O confessionário, onde a Igreja recebe quem volta.</figcaption>
+                </figure>
               </div>
-              <figure class="doctrine">
-                <div class="doctrine-text">
-                  <blockquote>"Àqueles que se aproximam do Sacramento da Penitência, o Pai misericordioso concede o perdão da ofensa feita a Ele e reconcilia-os com a Igreja."</blockquote>
-                </div>
-                <figcaption>Catecismo da Igreja Católica, §1422</figcaption>
-              </figure>
-              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+a+Confi%C3%A7%C3%A3o." class="wa-btn sac-accord-wa" target="_blank" rel="noopener">
-                <span class="wa-circle" style="width:24px;height:24px;" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                </span>
-                <span>Informações sobre Confissão</span>
-              </a>
             </div>
           </div>
         </article>
 
         <!-- V. UNÇÃO DOS ENFERMOS -->
+        <!-- REVISÃO PASTORAL: confirmar telefone de emergência específico
+             para Unção fora do horário comercial com Pe. Wellington.
+             Hoje fica como placeholder. -->
         <article class="sac-accord-card" id="uncao">
           <button class="sac-accord-header" aria-expanded="false">
             <span class="sac-accord-num">V</span>
@@ -189,19 +319,40 @@
           <div class="sac-accord-body">
             <div class="sac-accord-inner">
               <div class="sac-accord-text">
-                <p>A Unção dos Enfermos é oferecida a quem enfrenta doença grave ou idade avançada. Oferece força, paz e coragem para enfrentar o sofrimento com fé. Para chamar o padre em urgência, WhatsApp 24 horas.</p>
+                <p>Graça para o sofrimento e a passagem. A Unção dos Enfermos não é apenas para os últimos momentos — é para qualquer fiel em perigo de morte por doença ou velhice. É consolo, fortalecimento e perdão.</p>
               </div>
               <figure class="doctrine">
                 <div class="doctrine-text">
-                  <blockquote>"A santa Unção dos Enfermos não é somente o Sacramento dos que se encontram nos últimos momentos da vida. O tempo oportuno é quando o fiel começa a estar em perigo de morte por doença ou velhice."</blockquote>
+                  <blockquote>"A santa Unção dos Enfermos não é somente o sacramento dos que se encontram nos últimos momentos da vida. Por isso, o tempo oportuno para recebê-lo é quando o fiel começa a estar em perigo de morte por doença ou velhice."</blockquote>
                 </div>
-                <figcaption>Catecismo da Igreja Católica, §1499</figcaption>
+                <figcaption>Catecismo da Igreja Católica, n. 1499</figcaption>
               </figure>
-              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+preciso+chamar+o+padre+para+Un%C3%A7%C3%A3o+dos+Enfermos." class="wa-btn sac-accord-wa" target="_blank" rel="noopener">
-                <span class="wa-circle" style="width:24px;height:24px;" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div class="eyebrow eyebrow-gold" style="margin: 32px 0 0;">Como solicitar</div>
+              <div class="visit-hours">
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Para quem</span>
+                  <span class="visit-hours-value">Doentes graves, idosos em fragilidade, pessoas antes de cirurgia importante.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Onde</span>
+                  <span class="visit-hours-value">Em casa, no hospital ou na Igreja.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Como pedir</span>
+                  <span class="visit-hours-value">Pelo WhatsApp ou telefone da paróquia, a qualquer momento.</span>
+                </div>
+                <div class="visit-hours-row">
+                  <span class="visit-hours-label">Urgência</span>
+                  <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->
+                  <span class="visit-hours-value">Em emergência, ligue [telefone de emergência da paróquia].</span>
+                </div>
+              </div>
+              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+solicitar+a+Un%C3%A7%C3%A3o+dos+Enfermos."
+                 class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+                <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 </span>
-                <span>Chamar o padre</span>
+                <span>Solicitar Unção</span>
               </a>
             </div>
           </div>
@@ -219,20 +370,67 @@
           <div class="sac-accord-body">
             <div class="sac-accord-inner">
               <div class="sac-accord-text">
-                <p>O Sacramento da Ordem confere uma missão específica: servir ao povo de Deus como diácono, presbítero ou bispo. Se você sente um chamado para a vida sacerdotal ou religiosa, fale com o pároco.</p>
+                <p>O sacramento do serviço. Pela Ordem, alguns batizados são consagrados para servir a Igreja como diáconos, presbíteros e bispos. É vocação, não escolha.</p>
               </div>
               <figure class="doctrine">
                 <div class="doctrine-text">
-                  <blockquote>"É ao Sacramento da Ordem que compete o múnus de ensinar, santificar e governar o povo de Deus em nome e na pessoa de Cristo."</blockquote>
+                  <blockquote>"Não fostes vós que me escolhestes, mas fui eu que vos escolhi."</blockquote>
                 </div>
-                <figcaption>Catecismo da Igreja Católica, §1536</figcaption>
+                <figcaption>Evangelho de João, 15,16</figcaption>
               </figure>
-              <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+conversar+sobre+voca%C3%A7%C3%A3o+sacerdotal+e+religiosa." class="wa-btn sac-accord-wa" target="_blank" rel="noopener">
-                <span class="wa-circle" style="width:24px;height:24px;" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                </span>
-                <span>Falar sobre vocação sacerdotal</span>
-              </a>
+              <div class="sac-accord-text" style="margin-top: 8px;">
+                <p>Esta paróquia é a casa-mãe dos Missionários Claretianos no Brasil. A vocação ao sacerdócio claretiano segue um caminho específico de discernimento e formação.</p>
+              </div>
+              <p style="font-family:var(--font-body); font-size:var(--fs-body); line-height:1.7; color:var(--ink-deep); margin: 16px 0 0;">
+                <a href="os-claretianos.html" style="color:var(--ink-carmine);">
+                  <span style="color:var(--ink-gold);">→</span> Conheça os Missionários Claretianos
+                </a>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- VII. MATRIMÔNIO -->
+        <!-- ANTECEDÊNCIA MATRIMÔNIO: source of truth recomenda 6 meses a
+             1 ano. 6 meses é o mínimo razoável. Confirmar prática desta
+             paróquia com Pe. Wellington antes de publicar. -->
+        <article class="sac-accord-card" id="matrimonio">
+          <button class="sac-accord-header" aria-expanded="false">
+            <span class="sac-accord-num">VII</span>
+            <span class="sac-accord-title">Matrimônio</span>
+            <span class="sac-accord-chevron" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="sac-accord-body">
+            <div class="sac-accord-inner">
+              <div class="editorial-block-grid" style="gap: 48px; align-items: start;">
+                <!-- Coluna esquerda: texto + botão -->
+                <div>
+                  <h2 style="margin: 0 0 12px;">Celebrar seu casamento aqui</h2>
+                  <p style="font-family:var(--font-display); font-style:italic; font-weight:400; font-size:20px; line-height:1.55; color:var(--ink-deep); margin:0 0 16px; font-variation-settings:'opsz' 72,'SOFT' 50;">
+                    Celebrar o Matrimônio nesta Igreja é inserir seu casamento numa tradição claretiana que desde 1899 celebra o amor conjugal como sinal do Evangelho.
+                  </p>
+                  <div class="sac-accord-text">
+                    <!-- REVISÃO PASTORAL: confirmar se 6 meses é a antecedência
+                         mínima praticada nesta paróquia com Pe. Wellington. -->
+                    <p>Para conhecer o processo, requisitos e disponibilidade de datas, fale com a paróquia. Recomendamos procurar com antecedência mínima de 6 meses.</p>
+                  </div>
+                  <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+Curso+de+Noivos+e+agendamento+do+Matrim%C3%B4nio."
+                     class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+                    <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    </span>
+                    <span>Falar sobre Matrimônio</span>
+                  </a>
+                </div>
+                <!-- Coluna direita: foto -->
+                <figure class="ed-fig">
+                  <div class="ed-fig-frame">
+                    <img src="assets/interior-galerias.jpg" alt="Interior da Igreja com galerias e altar-mor" loading="lazy"/>
+                  </div>
+                </figure>
+              </div>
             </div>
           </div>
         </article>
@@ -240,53 +438,23 @@
       </div><!-- /sac-accord-grid -->
     </div><!-- /sac-accord-wrap -->
 
-    <div class="div-fleuron" aria-hidden="true"></div>
+    <hr class="div-plain"/>
 
-    <!-- MATRIMÔNIO — bloco em destaque -->
-    <!-- ⚠ PLACEHOLDER — Pe. Wellington vai fornecer detalhes do processo. -->
-    <section class="matrimonio-featured fade-in" id="matrimonio" aria-label="Sacramento do Matrimônio">
-      <div class="matrimonio-header">
-        <span class="matrimonio-numeral">VII</span>
-        <div class="eyebrow eyebrow-gold">Matrimônio</div>
-      </div>
-      <div class="matrimonio-grid">
-        <div class="matrimonio-photo">
-          <figure class="ed-fig ed-fig--portrait">
-            <div class="ed-fig-frame">
-              <img src="assets/interior-galerias.jpg" alt="Interior da Igreja com galerias e altar-mor" loading="lazy"/>
-            </div>
-          </figure>
-        </div>
-        <div class="matrimonio-text">
-          <h2>Celebrar seu casamento aqui</h2>
-          <p class="matrimonio-lead">
-            Celebrar o Matrimônio nesta Igreja é inserir seu casamento numa tradição claretiana que há mais de 128 anos celebra o amor conjugal como sinal do Evangelho.
-          </p>
-          <p>Para conhecer o processo, requisitos e disponibilidade de datas, fale com a paróquia. Recomendamos procurar com antecedência mínima de 12 meses.</p>
-          <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20Matrim%C3%B4nio%20nesta%20par%C3%B3quia." class="btn-primary matrimonio-cta" target="_blank" rel="noopener">
-            <span class="wa-circle" style="width:20px;height:20px;" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </span>
-            Conversar sobre seu casamento
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- RICA — caminho para os sacramentos de iniciação -->
-    <section class="rica-section fade-in" id="rica" aria-label="RICA — Rito de Iniciação Cristã de Adultos">
-      <div class="rica-header">
-        <span class="rica-numeral">VIII</span>
-        <div class="eyebrow eyebrow-gold">Para adultos não batizados</div>
-      </div>
-      <h2>RICA, Rito de Iniciação Cristã de Adultos</h2>
+    <!-- RICA — Rito de Iniciação Cristã de Adultos -->
+    <!-- RICA é um processo de iniciação cristã, não um sacramento
+         (culmina nos sacramentos de iniciação: Batismo + Crisma +
+         Eucaristia). Por isso aparece SEPARADO da numeração I-VII. -->
+    <section class="rica-section fade-in" id="rica" aria-label="Iniciação Cristã — RICA">
+      <div class="eyebrow eyebrow-gold">Iniciação Cristã</div>
+      <h2 style="font-style: italic;">Para quem não foi batizado.</h2>
       <p>Se você nunca foi batizado e deseja se tornar católico, o caminho é o RICA: um processo de catequese e acompanhamento que culmina na Vigília Pascal, quando se recebe Batismo, Crisma e Primeira Eucaristia numa só celebração.</p>
       <p>Fale com a paróquia para saber como começar.</p>
-      <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+processo+de+inicia%C3%A7%C3%A3o+crist%C3%A3+para+adultos+%28RICA%29." class="btn-primary" target="_blank" rel="noopener">
-        <span class="wa-circle" style="width:20px;height:20px;" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="white" style="width:12px;height:12px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+processo+de+inicia%C3%A7%C3%A3o+crist%C3%A3+para+adultos+%28RICA%29."
+         class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+        <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </span>
-        Começar conversa sobre RICA
+        <span>Começar conversa sobre RICA</span>
       </a>
     </section>
 
