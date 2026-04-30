@@ -312,6 +312,57 @@ address { font-style: normal; }
 .nav-contribua:hover { background: var(--ink-carmine); color: var(--ink-cream); }
 
 /* ================================================================
+   MOBILE MENU (details/summary, CSS puro — zero JS)
+   ================================================================ */
+details.mobile-menu { display: none; } /* desktop: escondido */
+
+.mobile-menu-toggle {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px;
+  list-style: none; cursor: pointer; user-select: none;
+  color: var(--ink-deep);
+}
+.mobile-menu-toggle::-webkit-details-marker { display: none; }
+.mobile-menu-toggle::marker { display: none; content: ''; }
+
+.mobile-menu-icon-open  { display: flex; }
+.mobile-menu-icon-close { display: none; }
+details.mobile-menu[open] .mobile-menu-icon-open  { display: none; }
+details.mobile-menu[open] .mobile-menu-icon-close { display: flex; }
+
+.mobile-menu-nav { display: none; }
+details.mobile-menu[open] .mobile-menu-nav {
+  display: flex; flex-direction: column;
+  position: fixed; inset: 0; z-index: 9;
+  background: var(--ink-cream);
+  padding: 80px 32px 48px;
+  overflow-y: auto;
+}
+.mobile-menu-nav ul {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column;
+}
+.mobile-menu-nav li { border-bottom: 1px solid var(--ink-rule); }
+.mobile-menu-nav li a {
+  display: block;
+  font-family: var(--font-display); font-style: italic; font-size: 24px;
+  color: var(--ink-deep); text-decoration: none;
+  padding: 20px 0;
+  transition: color 140ms;
+}
+.mobile-menu-nav li a:hover { color: var(--ink-carmine); }
+.mobile-menu-nav .nav-contribua-mobile {
+  display: inline-block; margin-top: 36px; align-self: flex-start;
+  font-family: var(--font-ui); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink-cream); background: var(--ink-carmine);
+  border: 1px solid var(--ink-carmine); border-radius: 2px;
+  padding: 12px 24px; text-decoration: none;
+  transition: background 200ms;
+}
+.mobile-menu-nav .nav-contribua-mobile:hover { background: #6B1F12; border-color: #6B1F12; }
+
+/* ================================================================
    MAIN LAYOUT
    ================================================================ */
 .main { flex: 1; width: 100%; max-width: 1080px; margin: 0 auto; padding: 64px 48px 96px; }
@@ -1166,6 +1217,10 @@ address { font-style: normal; }
 
 @media (max-width: 900px) {
   .site-header nav { display: none; }
+  .nav-contribua { display: none; }
+  details.mobile-menu { display: block; }
+  .site-header { padding: 12px 20px; }
+  .brand-logo img { height: 36px; }
   .main, .home-inner { padding-left: 24px; padding-right: 24px; }
   .chapter-body,
   .claret-section .chapter-body,
@@ -1216,7 +1271,23 @@ address { font-style: normal; }
   .hero-title-light { font-size: 42px; }
   .hero-stack { padding: 64px 24px 48px; }
   .hero-sub { font-size: 14px; max-width: 360px; }
-  .sch-strip { padding-top: 64px; padding-bottom: 64px; }
+  /* Hero CTAs — coluna única no mobile */
+  .hero-ctas-light { flex-direction: column; gap: 12px; align-items: center; }
+  .hero-ctas-light a { width: 100%; max-width: 340px; text-align: center; }
+  /* Faixa de horários — empilha verticalmente */
+  .sch-strip { padding-top: 64px; padding-bottom: 64px; padding-left: 24px; padding-right: 24px; }
+  .sch-strip-cols { flex-direction: column; gap: 0; }
+  .sch-strip-sep { display: none; }
+  .sch-strip-col {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--ink-rule);
+  }
+  .sch-strip-col:last-child { border-bottom: none; }
+  .sch-day { margin-bottom: 0; }
+  .sch-times { font-size: 22px; text-align: right; line-height: 1.4; }
+  /* Sacramentos header — empilha */
+  .home-sac3-hdr { flex-direction: column; align-items: flex-start; gap: 12px; }
   .home-sac3 { padding: 64px 24px; }
   .home-sac3-grid { grid-template-columns: 1fr; }
   .dizimo-home { padding: 64px 24px; }
@@ -1243,6 +1314,9 @@ address { font-style: normal; }
   }
   .contato-bloco-monumental__canais { max-width: 100%; }
   .contato-bloco-monumental__cream .ornamento-coracao { width: 48px !important; height: 48px !important; }
+  /* Footer — coluna única */
+  .foot-grid { grid-template-columns: 1fr; gap: 32px; }
+  .site-footer { padding: 48px 24px 32px; margin-top: 64px; }
   /* Timeline mobile — trilho à esquerda */
   .tl-list::before { left: 16px; }
   .tl-item { grid-template-columns: 20px 1fr; gap: 12px; }
