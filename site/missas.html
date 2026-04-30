@@ -40,25 +40,29 @@
   <main class="main">
 
     <!-- Cabeçalho -->
-    <div class="eyebrow">Liturgia</div>
-    <h1 class="page-title">Horários de Missa</h1>
-    <p class="page-lead">Celebramos a Santa Missa todos os dias.</p>
+    <div style="text-align: center;">
+      <div class="eyebrow">Liturgia</div>
+      <h1 class="page-title">A Santa Missa.</h1>
+      <!-- Citação ancorada em CIC 1324 / Lumen Gentium 11.
+           Não alterar sem revisão pastoral. -->
+      <p class="page-lead" style="text-align: center; max-width: 640px; margin: 0 auto;">Celebramos a Eucaristia todos os dias. Fonte e ápice de toda a vida cristã.</p>
+    </div>
 
     <!-- Horários -->
-    <section class="missa-horario-block fade-in" aria-label="Horários de Missa">
-      <div class="missa-horario-orn" aria-hidden="true">❦</div>
+    <section class="missa-horario-block fade-in" style="margin-left: auto; margin-right: auto;" aria-label="Horários de Missa">
+      <div class="ornamento-coracao" role="presentation" aria-hidden="true" style="margin-bottom: 24px;"></div>
 
       <div class="missa-group">
         <span class="missa-group-label">Domingo</span>
         <div class="missa-times-row">
           <span class="missa-time">7h30</span>
-          <span class="missa-orn" aria-hidden="true">✦</span>
+          <span class="missa-orn" aria-hidden="true">·</span>
           <span class="missa-time">9h30</span>
-          <span class="missa-orn" aria-hidden="true">✦</span>
+          <span class="missa-orn" aria-hidden="true">·</span>
           <span class="missa-time">11h</span>
-          <span class="missa-orn" aria-hidden="true">✦</span>
+          <span class="missa-orn" aria-hidden="true">·</span>
           <span class="missa-time">18h</span>
-          <span class="missa-orn" aria-hidden="true">✦</span>
+          <span class="missa-orn" aria-hidden="true">·</span>
           <span class="missa-time">19h30</span>
         </div>
       </div>
@@ -67,7 +71,7 @@
         <span class="missa-group-label">Segunda a Sexta</span>
         <div class="missa-times-row">
           <span class="missa-time">6h30</span>
-          <span class="missa-orn" aria-hidden="true">✦</span>
+          <span class="missa-orn" aria-hidden="true">·</span>
           <span class="missa-time">18h</span>
         </div>
       </div>
@@ -76,41 +80,87 @@
         <span class="missa-group-label">Sábado</span>
         <div class="missa-times-row">
           <span class="missa-time">8h</span>
-          <span class="missa-orn" aria-hidden="true">✦</span>
+          <span class="missa-orn" aria-hidden="true">·</span>
           <span class="missa-time">16h</span>
         </div>
       </div>
 
       <p class="missa-horario-note">
-        Confissões antes das Missas. Detalhes na página <a href="sacramentos.html" style="color:var(--ink-carmine);">Sacramentos</a>.
+        As Confissões acontecem antes das Missas. <span style="color:var(--ink-gold);">→</span> <a href="sacramentos.html" style="color:var(--ink-carmine);">Conheça os Sacramentos</a>
       </p>
     </section>
 
     <hr class="div-plain"/>
 
-    <!-- Adoração Eucarística -->
-    <!-- ⚠ PLACEHOLDER — Confirmar dia e horário com a secretaria antes de publicar. -->
-    <section class="adoracao-section fade-in" aria-label="Adoração Eucarística">
-      <div class="eyebrow eyebrow-gold">Diante do Santíssimo</div>
-      <h2>Adoração Eucarística</h2>
-      <p class="adoracao-lead">
-        Tempo de oração silenciosa diante da Eucaristia exposta, aberto a todos os fiéis.
-      </p>
-      <div class="adoracao-horario">
-        <div class="adoracao-horario-rule" aria-hidden="true"></div>
-        <p class="adoracao-horario-text">[Dia da semana], das [hora] às [hora]</p>
-        <div class="adoracao-horario-rule" aria-hidden="true"></div>
+    <!-- Antes da primeira Missa -->
+    <!-- REVISÃO PASTORAL: linha "COMO PARTICIPAR" parafraseia CIC 1415
+         e o costume eclesial sobre Comunhão. Confirmar formulação com
+         Pe. Wellington antes de publicar. -->
+    <!-- COMO EDITAR: para alterar o endereço, mude o texto e o link
+         "Ver no mapa". Para alterar tempo de chegada ou orientações,
+         edite as linhas correspondentes. -->
+    <section class="visit-block fade-in" aria-label="Antes da primeira Missa">
+      <div class="visit-block-inner">
+        <div class="eyebrow eyebrow-gold">Orientação</div>
+        <h2 style="font-style: italic; margin-bottom: 24px;">Antes da primeira Missa.</h2>
+        <div class="visit-hours">
+          <div class="visit-hours-row">
+            <span class="visit-hours-label">Onde</span>
+            <span class="visit-hours-value">
+              Rua Jaguaribe, 735 — Vila Buarque, São Paulo<br/>
+              <a href="https://maps.google.com/?q=Rua+Jaguaribe+735+Vila+Buarque+São+Paulo"
+                 target="_blank" rel="noopener" style="color:var(--ink-carmine);">→ Ver no mapa</a>
+            </span>
+          </div>
+          <div class="visit-hours-row">
+            <span class="visit-hours-label">Quando chegar</span>
+            <span class="visit-hours-value">Cinco a dez minutos antes do horário.</span>
+          </div>
+          <div class="visit-hours-row">
+            <span class="visit-hours-label">Como participar</span>
+            <span class="visit-hours-value">A Missa é aberta a todos. Quem não é católico ou não está em condição de comungar permanece no lugar no momento da Comunhão, em respeito.</span>
+          </div>
+          <div class="visit-hours-row">
+            <span class="visit-hours-label">Se puder</span>
+            <span class="visit-hours-value">Telefone no silencioso. Roupas que você usaria numa visita formal.</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div class="div-fleuron" aria-hidden="true"></div>
+    <hr class="div-plain"/>
+
+    <!-- Adoração Eucarística -->
+    <!-- ADORAÇÃO: quando a paróquia confirmar horário fixo da Adoração,
+         substituir o bloco evergreen abaixo por uma definition list igual
+         à de 'Visite a Igreja' em a-paroquia.html. Manter o botão WhatsApp
+         como complemento. -->
+    <section class="adoracao-section fade-in" aria-label="Adoração Eucarística">
+      <div class="eyebrow eyebrow-gold">Diante do Santíssimo</div>
+      <h2>Adoração Eucarística.</h2>
+      <p class="adoracao-lead">
+        Tempo de oração silenciosa diante da Eucaristia exposta.
+      </p>
+      <p style="font-family:var(--font-body); font-size:var(--fs-body); line-height:1.7; color:var(--ink-deep); margin: 24px 0 20px;">Para o horário atual da Adoração, fale com a secretaria.</p>
+      <a href="https://wa.me/5511959287365?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20o%20hor%C3%A1rio%20da%20Adora%C3%A7%C3%A3o%20Eucar%C3%ADstica."
+         class="wa-btn wa-btn--mono" target="_blank" rel="noopener">
+        <span class="wa-circle wa-circle--mono" style="width:24px;height:24px;" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px; color:var(--ink-carmine);"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </span>
+        <span>Falar com a secretaria</span>
+      </a>
+    </section>
+
+    <div class="ornamento-coracao" role="presentation" aria-hidden="true" style="margin: var(--space-block) auto;"></div>
 
     <!-- Ano Litúrgico -->
+    <!-- REVISÃO PASTORAL: parágrafo de abertura do ano litúrgico —
+         reformulado para evitar leitura cíclica/pagã da vida cristã. -->
     <section class="lit-section fade-in" aria-label="O ano litúrgico">
       <div class="eyebrow">Calendário da fé</div>
-      <h2 class="lit-title">O ano litúrgico</h2>
-      <p class="lit-intro">A vida cristã não é uma linha reta, é um ciclo. Todo ano, a Igreja percorre os grandes mistérios de Cristo: sua espera, seu nascimento, sua Paixão, sua Ressurreição.</p>
-      <p class="lit-intro">Cada tempo tem uma cor. Se você prestar atenção à estola do padre e aos paramentos do altar, vai ver que mudam conforme o tempo litúrgico. É uma pregação silenciosa, visual, que atravessa os séculos.</p>
+      <h2 class="lit-title">O ano litúrgico.</h2>
+      <p class="lit-intro" style="max-width: 680px; margin: 0 0 20px;">O ano litúrgico não é uma linha reta — é uma espiral. A cada ano, a Igreja revisita os mistérios de Cristo: sua espera, seu nascimento, sua Paixão, sua Ressurreição. E a cada vez, somos convidados a entrar mais fundo.</p>
+      <p class="lit-intro" style="max-width: 680px; margin: 0 0 20px;">Cada tempo tem uma cor. Se você prestar atenção à estola do padre e aos paramentos do altar, vai ver que mudam conforme o tempo litúrgico. É uma pregação silenciosa, visual, que atravessa os séculos.</p>
 
       <div class="lit-grid">
 
@@ -124,11 +174,11 @@
         </div>
 
         <div class="lit-card">
-          <div class="lit-card-bar" style="background:#E8DCC4;" aria-hidden="true"></div>
+          <div class="lit-card-bar" style="background:#E8DCC4; border: 1px solid var(--ink-rule);" aria-hidden="true"></div>
           <div class="lit-card-body">
-            <div class="lit-card-tempo">Natal</div>
+            <div class="lit-card-tempo">Tempo do Natal</div>
             <div class="lit-card-cor eyebrow eyebrow-mute" style="margin:4px 0 8px;">branco</div>
-            <p class="lit-card-desc">Do 24 de dezembro ao Batismo do Senhor. Celebramos a Encarnação.</p>
+            <p class="lit-card-desc">Do Natal ao Batismo do Senhor. Celebramos a Encarnação.</p>
           </div>
         </div>
 
@@ -146,25 +196,26 @@
           <div class="lit-card-body">
             <div class="lit-card-tempo">Tríduo Pascal</div>
             <div class="lit-card-cor eyebrow eyebrow-mute" style="margin:4px 0 8px;">branco e vermelho</div>
-            <p class="lit-card-desc">Quinta (branco), Sexta (vermelho), Sábado e Vigília (branco). Os três dias mais sagrados.</p>
+            <p class="lit-card-desc">Quinta (branco), Sexta (vermelho), Vigília Pascal (branco). Os três dias mais sagrados do ano.</p>
           </div>
         </div>
 
         <div class="lit-card">
-          <div class="lit-card-bar" style="background:#E8DCC4;" aria-hidden="true"></div>
+          <div class="lit-card-bar" style="background:#E8DCC4; border: 1px solid var(--ink-rule);" aria-hidden="true"></div>
           <div class="lit-card-body">
-            <div class="lit-card-tempo">Páscoa</div>
+            <div class="lit-card-tempo">Tempo Pascal</div>
             <div class="lit-card-cor eyebrow eyebrow-mute" style="margin:4px 0 8px;">branco</div>
-            <p class="lit-card-desc">Os 50 dias após a Ressurreição. Tempo de alegria pascal.</p>
+            <p class="lit-card-desc">Os 50 dias do Domingo de Páscoa a Pentecostes. Tempo de alegria pascal.</p>
           </div>
         </div>
 
         <div class="lit-card">
+          <!-- Referência: Atos 2,1-4 -->
           <div class="lit-card-bar" style="background:#8B2E1F;" aria-hidden="true"></div>
           <div class="lit-card-body">
             <div class="lit-card-tempo">Pentecostes</div>
             <div class="lit-card-cor eyebrow eyebrow-mute" style="margin:4px 0 8px;">vermelho</div>
-            <p class="lit-card-desc">A festa do Espírito Santo. Início da missão da Igreja no mundo.</p>
+            <p class="lit-card-desc">A vinda do Espírito Santo sobre os Apóstolos. O nascimento da Igreja missionária.</p>
           </div>
         </div>
 
@@ -185,8 +236,10 @@
         </div>
 
       </div>
-      <p class="lit-note">
-        Em dois domingos especiais, <em>Gaudete</em> no Advento e <em>Laetare</em> na Quaresma, o padre usa rosa. É a Igreja dizendo, no meio da penitência: alegrem-se, a festa está próxima.
+      <!-- 'Gaudete' e 'Laetare' são latim (incipits dos respectivos
+           domingos). Não traduzir. -->
+      <p class="lit-note" style="max-width: 680px;">
+        Em dois domingos do ano — <em style="font-style: normal;">Gaudete</em>, no Advento, e <em style="font-style: normal;">Laetare</em>, na Quaresma — o padre usa rosáceo. É a Igreja antecipando a alegria da festa que se aproxima.
       </p>
     </section>
 
