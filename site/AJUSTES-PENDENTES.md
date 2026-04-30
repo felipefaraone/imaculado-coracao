@@ -88,7 +88,18 @@ Cada página é autocontida: inclui o header, o conteúdo, e o footer. CSS compa
 
 - [ ] 4 colunas: Endereço, Telefones, Digital, Pastoral
 - [ ] "Instagram: @paroquiaimaculadosp" (label explícito)
-- [ ] Ícone WhatsApp verde
+- [x] Ícone WhatsApp no footer — monocromático carmim (`.site-footer .wa-circle { background: var(--ink-carmine) }`)
+      Decisão revisada: botão WhatsApp do Contato e footer agora usam
+      carmim monocromático (.wa-btn--mono), igual ao resto do site.
+      Regra anterior ("verde #25D366 exclusivo no Contato e footer")
+      foi abandonada por consistência visual. .wa-btn--green permanece
+      em site.css como CSS orphan — pendente limpeza futura.
+- [x] Bloco monumental Contato: background é --ink-parchment (#EBE1D0). Carmim é
+      cor de acento no site, não de background massivo. Tipografia dos canais volta
+      ao padrão ink-deep + eyebrows ouro/carmim, idêntico ao resto do site.
+      Botão WhatsApp usa .wa-btn--mono padrão.
+      Classes/vars removidas: --ink-carmine-deep, .wa-btn--on-dark.
+      CSS orphan restante: .wa-btn--green (pendente limpeza futura).
 - [ ] "Administrada pelos Missionários Claretianos desde 1897."
 - [ ] Link claretianos.com.br
 - [ ] "In cordibus Iesu et Mariae." em itálico
