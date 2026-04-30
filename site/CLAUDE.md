@@ -103,6 +103,24 @@ Acolhedor sem ser condescendente. Formal sem ser burocrático. Carisma claretian
 - Segunda a sexta: 8h-12h e 13h30-19h30
 - Sábado: 7h30-11h30 e 12h30-15h45
 
+## Lightbox de fotos
+
+Fotos do site são maximizáveis ao clicar (CSS puro com :target, zero JavaScript). Para adicionar uma nova foto com zoom:
+1. Envolver o `<img>` com `<a href="#zoom-NOME">`
+2. Adicionar classe `photo-zoomable` no `<img>`
+3. Adicionar um `<div class="photo-lightbox" id="zoom-NOME">` antes do `</body>` com esta estrutura:
+   ```html
+   <div id="zoom-NOME" class="photo-lightbox">
+     <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+     <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+     <img src="assets/foto.jpg" alt="Descrição — vista ampliada"/>
+     <div class="photo-lightbox-caption">Legenda em Fraunces itálico.</div>
+   </div>
+   ```
+4. O `photo-lightbox-backdrop` é um link transparente que cobre o fundo escuro — clicar fora da foto fecha o lightbox
+
+Todos os links "fechar" usam `href="#_"` (remove o fragment sem rolar para o topo). Ver exemplos em a-paroquia.html.
+
 ## Placeholders
 Quando informação precisa ser confirmada com a secretaria, usar comentário HTML:
 <!-- ⚠ PLACEHOLDER — Confirmar com a secretaria antes de publicar. -->

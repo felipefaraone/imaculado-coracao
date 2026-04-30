@@ -51,7 +51,9 @@
         <div class="chapter-main">
           <figure class="ed-fig ed-fig--portrait-float">
             <div class="ed-fig-frame">
-              <img src="assets/fachada-sepia-historica.jpg" alt="Fachada da paróquia, início do século XX" loading="lazy"/>
+              <a href="#zoom-fachada">
+                <img src="assets/fachada-sepia-historica.jpg" alt="Fachada da paróquia, início do século XX" loading="lazy" class="photo-zoomable"/>
+              </a>
             </div>
             <figcaption class="ed-fig-cap">A fachada, começo do séc. XX.</figcaption>
           </figure>
@@ -85,35 +87,35 @@
         <!-- REVISÃO PASTORAL: confirmar inscrição "Cor Mariae"
              nos vitrais antes de publicar -->
         Os vitrais registram, em inscrições, o nome mariano da paróquia.</p>
-        <div class="eyebrow eyebrow-gold" style="text-align:center; margin-bottom:32px;">Vestígios visuais</div>
+        <div class="eyebrow eyebrow-gold" style="text-align:center; margin-bottom:32px;">A Igreja por dentro</div>
         <div class="arq-masonry">
           <figure class="arq-photo arq-photo--wide">
             <div class="ed-fig-frame">
-              <img src="assets/interior-galerias.jpg" alt="Galerias superiores com arcos" loading="lazy"/>
+              <a href="#zoom-galerias"><img src="assets/interior-galerias.jpg" alt="Galerias superiores com arcos" loading="lazy" class="photo-zoomable"/></a>
             </div>
             <figcaption class="ed-fig-cap">As galerias paralelas à nave central.</figcaption>
           </figure>
           <figure class="arq-photo">
             <div class="ed-fig-frame">
-              <img src="assets/capelas-laterais.jpg" alt="Capelas laterais com altares em mármore" loading="lazy"/>
+              <a href="#zoom-capelas"><img src="assets/capelas-laterais.jpg" alt="Capelas laterais com altares em mármore" loading="lazy" class="photo-zoomable"/></a>
             </div>
             <figcaption class="ed-fig-cap">As seis capelas laterais.</figcaption>
           </figure>
           <figure class="arq-photo">
             <div class="ed-fig-frame">
-              <img src="assets/orgao-frances.jpg" alt="Órgão de 1.170 tubos" loading="lazy"/>
+              <a href="#zoom-orgao"><img src="assets/orgao-frances.jpg" alt="Órgão de 1.170 tubos" loading="lazy" class="photo-zoomable"/></a>
             </div>
             <figcaption class="ed-fig-cap">O órgão francês, instalado em 1906.</figcaption>
           </figure>
           <figure class="arq-photo">
             <div class="ed-fig-frame">
-              <img src="assets/cupula-central.jpg" alt="Cúpula central decorada" loading="lazy"/>
+              <a href="#zoom-cupula"><img src="assets/cupula-central.jpg" alt="Cúpula central decorada" loading="lazy" class="photo-zoomable"/></a>
             </div>
             <figcaption class="ed-fig-cap">A cúpula central, pintada pelos Mecozzi entre 1929 e 1934.</figcaption>
           </figure>
           <figure class="arq-photo">
             <div class="ed-fig-frame">
-              <img src="assets/vitrais-cor-maria.jpg" alt="Vitrais Cor Mariae Santa Maria" loading="lazy"/>
+              <a href="#zoom-vitrais"><img src="assets/vitrais-cor-maria.jpg" alt="Vitrais Cor Mariae Santa Maria" loading="lazy" class="photo-zoomable"/></a>
             </div>
             <figcaption class="ed-fig-cap">Os vitrais com a inscrição mariana.</figcaption>
           </figure>
@@ -182,7 +184,7 @@
         <div class="editorial-block-grid">
           <figure class="ed-fig">
             <div class="ed-fig-frame">
-              <img src="assets/anjos-fachada.jpg" alt="Anjos de pedra com trombetas na fachada" loading="lazy"/>
+              <a href="#zoom-anjos"><img src="assets/anjos-fachada.jpg" alt="Anjos de pedra com trombetas na fachada" loading="lazy" class="photo-zoomable"/></a>
             </div>
             <figcaption class="ed-fig-cap">Anjos de pedra que o tombamento protege.</figcaption>
           </figure>
@@ -314,5 +316,65 @@
   </footer>
 
 </div><!-- /page -->
+
+<!-- ====================================================
+     LIGHTBOXES DE FOTOS — Sistema de zoom em CSS puro.
+     Cada foto da página tem um lightbox correspondente
+     aqui. Para adicionar nova foto:
+     1. No <figure>, envolver o <img> com <a href="#zoom-NOME">
+     2. Adicionar classe "photo-zoomable" no <img>
+     3. Copiar um bloco <div class="photo-lightbox"> abaixo,
+        mudando ID, src e caption.
+     ==================================================== -->
+
+<div id="zoom-fachada" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/fachada-sepia-historica.jpg" alt="A fachada da paróquia, começo do séc. XX — vista ampliada"/>
+  <div class="photo-lightbox-caption">A fachada, começo do séc. XX.</div>
+</div>
+
+<div id="zoom-galerias" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/interior-galerias.jpg" alt="As galerias paralelas à nave central — vista ampliada"/>
+  <div class="photo-lightbox-caption">As galerias paralelas à nave central.</div>
+</div>
+
+<div id="zoom-capelas" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/capelas-laterais.jpg" alt="As seis capelas laterais — vista ampliada"/>
+  <div class="photo-lightbox-caption">As seis capelas laterais.</div>
+</div>
+
+<div id="zoom-orgao" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/orgao-frances.jpg" alt="O órgão francês, instalado em 1906 — vista ampliada"/>
+  <div class="photo-lightbox-caption">O órgão francês, instalado em 1906.</div>
+</div>
+
+<div id="zoom-cupula" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/cupula-central.jpg" alt="A cúpula central — vista ampliada"/>
+  <div class="photo-lightbox-caption">A cúpula central, pintada pelos Mecozzi entre 1929 e 1934.</div>
+</div>
+
+<div id="zoom-vitrais" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/vitrais-cor-maria.jpg" alt="Os vitrais com a inscrição mariana — vista ampliada"/>
+  <div class="photo-lightbox-caption">Os vitrais com a inscrição mariana.</div>
+</div>
+
+<div id="zoom-anjos" class="photo-lightbox">
+  <a href="#_" class="photo-lightbox-backdrop" aria-label="Fechar"></a>
+  <a href="#_" class="photo-lightbox-close" aria-label="Fechar">Fechar</a>
+  <img src="assets/anjos-fachada.jpg" alt="Anjos de pedra com trombetas na fachada — vista ampliada"/>
+  <div class="photo-lightbox-caption">Anjos de pedra que o tombamento protege.</div>
+</div>
+
 </body>
 </html>
