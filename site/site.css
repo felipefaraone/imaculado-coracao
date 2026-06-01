@@ -38,7 +38,6 @@
    BASE
    ================================================================ */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--ink-cream); font-family: var(--font-body); font-weight: 400; color: var(--ink-deep); -webkit-font-smoothing: antialiased; }
 
 .page { min-height: 100vh; display: flex; flex-direction: column; }
@@ -825,6 +824,8 @@ details.mobile-menu[open] .mobile-menu-nav {
    ================================================================ */
 .sac-accord-wrap { margin-top: 32px; }
 .sac-accord-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--ink-rule); border: 1px solid var(--ink-rule); }
+/* Header é sticky (~72px); folga para alvos de deep-link não ficarem cobertos */
+.sac-accord-card, #visitar, #rica { scroll-margin-top: 88px; }
 .sac-accord-card { background: var(--ink-cream); }
 .sac-accord-card.open { background: var(--ink-parchment); }
 .sac-accord-header {

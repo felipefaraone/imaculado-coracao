@@ -576,32 +576,64 @@
 /* Accordion dos Sacramentos — JS vanilla */
 (function () {
   'use strict';
+  var chevronOpen = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+  var chevronClose = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
+
+  /* Fecha todos os cards abertos e abre o card recebido (accordion exclusivo) */
+  function abrirCard(card) {
+    document.querySelectorAll('.sac-accord-card.open').forEach(function (c) {
+      c.classList.remove('open');
+      var btn = c.querySelector('.sac-accord-header');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        var ch = btn.querySelector('.sac-accord-chevron');
+        if (ch) ch.innerHTML = chevronClose;
+      }
+    });
+    card.classList.add('open');
+    var trigger = card.querySelector('.sac-accord-header');
+    if (trigger) {
+      trigger.setAttribute('aria-expanded', 'true');
+      var ch = trigger.querySelector('.sac-accord-chevron');
+      if (ch) ch.innerHTML = chevronOpen;
+    }
+  }
+
   document.querySelectorAll('.sac-accord-card').forEach(function (card) {
     var trigger = card.querySelector('.sac-accord-header');
     if (!trigger) return;
-    var chevronOpen = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
-    var chevronClose = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
     trigger.addEventListener('click', function () {
       var isOpen = card.classList.contains('open');
-      /* Fechar todos */
-      document.querySelectorAll('.sac-accord-card.open').forEach(function (c) {
-        c.classList.remove('open');
-        var btn = c.querySelector('.sac-accord-header');
-        if (btn) {
-          btn.setAttribute('aria-expanded', 'false');
-          var ch = btn.querySelector('.sac-accord-chevron');
-          if (ch) ch.innerHTML = chevronClose;
-        }
-      });
-      /* Abrir este se estava fechado */
-      if (!isOpen) {
-        card.classList.add('open');
-        trigger.setAttribute('aria-expanded', 'true');
+      if (isOpen) {
+        /* Clicar num card aberto fecha */
+        card.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
         var ch = trigger.querySelector('.sac-accord-chevron');
-        if (ch) ch.innerHTML = chevronOpen;
+        if (ch) ch.innerHTML = chevronClose;
+      } else {
+        /* Fechado: abre este e fecha os outros */
+        abrirCard(card);
       }
     });
   });
+
+  /* Se a página foi aberta com #hash de um card, abre-o e salta direto pra ele */
+  function abrirPeloHash() {
+    if (!location.hash) return;
+    var alvo;
+    try {
+      alvo = document.querySelector(location.hash);
+    } catch (e) {
+      return; /* hash inválido como seletor */
+    }
+    if (alvo && alvo.classList.contains('sac-accord-card')) {
+      abrirCard(alvo);
+      alvo.scrollIntoView({ block: 'start' });
+    }
+  }
+
+  abrirPeloHash();
+  window.addEventListener('hashchange', abrirPeloHash);
 })();
 </script>
 </body>
