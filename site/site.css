@@ -490,15 +490,13 @@ details.mobile-menu[open] .mobile-menu-nav {
 .int-list li { border-top: 1px solid var(--ink-rule); }
 .int-list li:last-child { border-bottom: 1px solid var(--ink-rule); }
 .int-item-link {
-  display: grid; grid-template-columns: 56px 1fr auto 24px;
+  display: grid; grid-template-columns: 1fr auto;
   gap: 16px; align-items: baseline;
   padding: 20px 0; text-decoration: none; color: inherit;
   transition: background 140ms, padding 140ms;
 }
 .int-item-link:hover { background: var(--ink-parchment); padding-left: 8px; padding-right: 8px; }
-.int-num { font-family: var(--font-display); font-style: italic; font-size: 20px; color: var(--ink-gold); }
 .int-label { font-family: var(--font-display); font-size: 22px; font-weight: 400; color: var(--ink-deep); letter-spacing: -0.01em; font-variation-settings: "opsz" 72, "SOFT" 50; }
-.int-sub { font-family: var(--font-body); font-size: var(--fs-small); color: var(--ink-mute); text-align: right; }
 .int-arrow { color: var(--ink-carmine); font-family: serif; font-size: 18px; }
 
 /* ================================================================
@@ -1245,8 +1243,6 @@ details.mobile-menu[open] .mobile-menu-nav {
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .history-break { margin-left: -24px; margin-right: -24px; }
   .ed-fig--portrait-float, .ed-fig--portrait-inline { float: none; width: 100%; margin: 0 0 24px; }
-  .int-item-link { grid-template-columns: 40px 1fr 24px; }
-  .int-sub { display: none; }
   .matrimonio-featured { padding: 40px 24px; }
   .sac-rica { padding: 32px 24px; }
   .contato-map-frame iframe { height: 300px; }
