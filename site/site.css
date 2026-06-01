@@ -149,6 +149,13 @@ address { font-style: normal; }
   background: var(--ink-cream);
   color: var(--ink-deep);
 }
+/* Moldura dupla creme nos botões do hero (linha interna = borda, externa = outline) */
+.hero-fullbleed .btn-primary,
+.hero-fullbleed .btn-secondary {
+  outline: 1px solid var(--ink-cream);
+  outline-offset: 4px;
+}
+.hero-fullbleed .btn-primary { border-color: var(--ink-cream); }
 
 /* WaBtn */
 .wa-btn {
@@ -1148,10 +1155,10 @@ details.mobile-menu[open] .mobile-menu-nav {
 .foot-item a { color: var(--ink-deep); text-decoration: none; transition: color 140ms; }
 .foot-item a:hover { color: var(--ink-carmine); }
 .foot-icon { width: 16px; height: 16px; color: var(--ink-mute); flex-shrink: 0; vertical-align: middle; }
-.foot-logo { display: block; margin-top: 16px; height: 60px; width: auto; opacity: 0.78; }
 /* Ícone WhatsApp no footer — monocromático carmim, coerente com design system */
 .site-footer .wa-circle { background: var(--ink-carmine); }
-.foot-divider { text-align: center; color: var(--ink-gold); font-family: serif; font-size: 18px; margin: 48px 0 24px; display: block; }
+.foot-divider { text-align: center; margin: 40px 0 28px; }
+.foot-mark { display: inline-block; height: 32px; width: auto; opacity: 0.78; }
 .foot-note { max-width: 1080px; margin: 0 auto 12px; font-family: var(--font-ui); font-size: var(--fs-mini); color: var(--ink-mute); opacity: 0.7; }
 .foot-mini { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; font-family: var(--font-ui); font-size: var(--fs-mini); letter-spacing: 0.08em; color: var(--ink-mute); }
 .foot-mini .latin { font-family: var(--font-display); font-style: italic; font-size: var(--fs-small); letter-spacing: 0; }
@@ -1319,7 +1326,7 @@ details.mobile-menu[open] .mobile-menu-nav {
   .foot-grid { grid-template-columns: 1fr; gap: 32px; }
   .site-footer { padding: 48px 24px 32px; margin-top: 64px; }
   .foot-mini { flex-direction: column; gap: 6px; }
-  .foot-divider { margin: 28px 0 20px; }
+  .foot-divider { margin: 36px 0 20px; }
   /* Timeline mobile — trilho à esquerda */
   .tl-list::before { left: 16px; }
   .tl-item { grid-template-columns: 20px 1fr; gap: 12px; }
