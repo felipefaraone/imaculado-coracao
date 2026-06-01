@@ -149,13 +149,6 @@ address { font-style: normal; }
   background: var(--ink-cream);
   color: var(--ink-deep);
 }
-/* Moldura dupla creme nos botões do hero (linha interna = borda, externa = outline) */
-.hero-fullbleed .btn-primary,
-.hero-fullbleed .btn-secondary {
-  outline: 1px solid var(--ink-cream);
-  outline-offset: 4px;
-}
-.hero-fullbleed .btn-primary { border-color: var(--ink-cream); }
 
 /* WaBtn */
 .wa-btn {
