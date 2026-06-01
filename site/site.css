@@ -395,14 +395,14 @@ details.mobile-menu[open] .mobile-menu-nav {
 .hero-eyebrow {
   font-family: var(--font-ui); font-size: 12px; font-weight: 600;
   letter-spacing: 0.24em; text-transform: uppercase;
-  color: #E2C87A; margin-bottom: 24px;
+  color: #F5EFE6; margin-bottom: 24px;
 }
 .hero-eyebrow--ornamented {
   display: flex; align-items: center; justify-content: center; gap: 14px;
 }
 .eyebrow-rule {
   display: inline-block; width: 60px; height: 1px;
-  background: #E2C87A; opacity: 0.90;
+  background: #F5EFE6; opacity: 0.90;
 }
 .hero-title-light {
   font-family: var(--font-display); font-weight: 400; font-style: italic;
